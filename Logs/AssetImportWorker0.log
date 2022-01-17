@@ -1,0 +1,474 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.17f1 (a4537701e4ab) revision 10769271'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1466; Version 2009; 64bit' Language: 'en' Physical Memory: 32644 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+J:/Projects/Github/Project Duality
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64043
+Successfully changed project path to: J:/Projects/Github/Project Duality
+J:/Projects/Github/Project Duality
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 34.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.17f1 (a4537701e4ab)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path J:/Projects/Github/Project Duality/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2080 with Max-Q Design (ID=0x1ed0)
+    Vendor:   
+    VRAM:     8010 MB
+    Driver:   30.0.14.7219
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56476
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002494 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 35.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.627 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1627ms)
+		BeginReloadAssembly (49ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (360ms)
+			LoadAssemblies (48ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (127ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (144ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (35ms)
+				BeforeProcessingInitializeOnLoad (11ms)
+				ProcessInitializeOnLoadAttributes (68ms)
+				ProcessInitializeOnLoadMethodAttributes (22ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002223 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 33.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Domain Reload Profiling:
+	ReloadAssembly (963ms)
+		BeginReloadAssembly (116ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (798ms)
+			LoadAssemblies (71ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (233ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (352ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (33ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (237ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2091 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.1 MB.
+System memory in use after: 93.2 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2528.
+Total: 3.461700 ms (FindLiveObjects: 0.207700 ms CreateObjectMapping: 0.069700 ms MarkObjects: 3.124800 ms  DeleteObjects: 0.058600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scenes
+  artifactKey: Guid(621c75dd056aa79499eb03f40f5217ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(621c75dd056aa79499eb03f40f5217ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1991cd10d476b2cdffd9104fee2727ae') in 0.003565 seconds 
+  Import took 0.006048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.665932 seconds.
+  path: Assets/Scenes/JD
+  artifactKey: Guid(bcecc33ce6464a74cb4412bab0e079b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD using Guid(bcecc33ce6464a74cb4412bab0e079b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2045b9bddfa3eee9134ee548160db2c') in 0.001454 seconds 
+  Import took 0.004783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.345545 seconds.
+  path: Assets/Scenes/Martin
+  artifactKey: Guid(a90fc2aeed0f8304299a60f149d9dc65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Martin using Guid(a90fc2aeed0f8304299a60f149d9dc65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55258082c8ce59b9d69e557077fdf751') in 0.001425 seconds 
+  Import took 0.004336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.709547 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa27944bdea339c97c39027c7eea529c') in 0.008268 seconds 
+  Import took 0.010913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 119.698572 seconds.
+  path: Assets/Scenes/JD/Prefabs
+  artifactKey: Guid(8670b715963c8094e88e03d4e01f0136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Prefabs using Guid(8670b715963c8094e88e03d4e01f0136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcf0647f22e4fffc93831c65bc0fac12') in 0.001305 seconds 
+  Import took 0.003975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.222896 seconds.
+  path: Assets/Scenes/JD/Scripts
+  artifactKey: Guid(9b5908a2b3ce15a4b91e841bdb53060d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Scripts using Guid(9b5908a2b3ce15a4b91e841bdb53060d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bce5cb24d56355db614c8a8d2dc5e2f') in 0.001345 seconds 
+  Import took 0.003835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.899488 seconds.
+  path: Assets/Scenes/JD/Scenes
+  artifactKey: Guid(05622595714ac774bbf3547b8d8e82cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Scenes using Guid(05622595714ac774bbf3547b8d8e82cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ac0181d914e565394ea8e5985faad91') in 0.001072 seconds 
+  Import took 0.003709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.365467 seconds.
+  path: Assets/Scenes/JD/Scenes/DEVTEST.unity
+  artifactKey: Guid(bb8ef70615c01ab49a66bca33ebb869e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Scenes/DEVTEST.unity using Guid(bb8ef70615c01ab49a66bca33ebb869e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bb4763d25090c6d4c7a329615c212c1') in 0.001568 seconds 
+  Import took 0.004605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.799796 seconds.
+  path: Assets/Scenes/JD/Audio
+  artifactKey: Guid(05cd0e22ee501bc439ba1e3d521e685a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio using Guid(05cd0e22ee501bc439ba1e3d521e685a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26602d6635fd194d3a38c2d9756fcc61') in 0.001267 seconds 
+  Import took 0.004324 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.558254 seconds.
+  path: Assets/Scenes/JD/Animations
+  artifactKey: Guid(5f4dcb247bbff12459f151adc7b936e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Animations using Guid(5f4dcb247bbff12459f151adc7b936e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3302bcc2d52eae9662b5a832eba8a1d6') in 0.001349 seconds 
+  Import took 0.004034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.491310 seconds.
+  path: Assets/Scenes/JD/Sprites
+  artifactKey: Guid(6d9d917f15b62c142aa00122018e6d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Sprites using Guid(6d9d917f15b62c142aa00122018e6d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a46db4d317fc9f25a03c25c91a78b66') in 0.001260 seconds 
+  Import took 0.004020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.219103 seconds.
+  path: Assets/Scenes/JD/Fonts
+  artifactKey: Guid(bb53e0e07ce7a55499cfcd66a12f4d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Fonts using Guid(bb53e0e07ce7a55499cfcd66a12f4d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef7748ec642c8ed97257bce5d8b19d9e') in 0.001425 seconds 
+  Import took 0.004232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.760884 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b816a7c5785f2d5616e6d5ad513f2eb') in 0.014297 seconds 
+  Import took 0.016954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005227 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b816a7c5785f2d5616e6d5ad513f2eb') in 0.001429 seconds 
+  Import took 0.004580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.772238 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfc58b08a93a5153a231a24471733fd5') in 0.001516 seconds 
+  Import took 0.003947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.157451 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfc58b08a93a5153a231a24471733fd5') in 0.001550 seconds 
+  Import took 0.004635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.607645 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031d4efbaacaed4c477f685f142d4d49') in 0.001634 seconds 
+  Import took 0.004670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.712475 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2ab7f7f3235c68c07af2f4b104bfb32') in 0.001641 seconds 
+  Import took 0.004049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.025812 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2ab7f7f3235c68c07af2f4b104bfb32') in 0.001766 seconds 
+  Import took 0.004224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.903458 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2454bb4f9ab4ca77cc3e5941c028cda2') in 0.001913 seconds 
+  Import took 0.004703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.059557 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e22eb171dba9501b62a420a14c3cd91') in 0.001710 seconds 
+  Import took 0.004153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.025626 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e22eb171dba9501b62a420a14c3cd91') in 0.001744 seconds 
+  Import took 0.004529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.689169 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab6fd4fffdf503e593713aff08bfea85') in 0.001781 seconds 
+  Import took 0.004506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.296116 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c14702a77e6ffd519ccc803cb773e96') in 0.001701 seconds 
+  Import took 0.004040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028916 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c14702a77e6ffd519ccc803cb773e96') in 0.002149 seconds 
+  Import took 0.004889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.480264 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e63e527ae314a736cdba8e6d1c9a82') in 0.002051 seconds 
+  Import took 0.004782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.887494 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5434cb69d28191828a5a18d4bfea2bdf') in 0.001768 seconds 
+  Import took 0.004132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.025538 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5434cb69d28191828a5a18d4bfea2bdf') in 0.002159 seconds 
+  Import took 0.005154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.815165 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '884ca411bad5230d6861e7a876af40e4') in 0.001971 seconds 
+  Import took 0.004519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.791609 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '012a99718cd90c8a013a06926c6da5ba') in 0.002013 seconds 
+  Import took 0.004604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.180903 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f67c6ce475965c57499b48f265a8b56') in 0.003452 seconds 
+  Import took 0.006423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.992131 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e2a31cbe3b1d0ad0dae1e417428c84') in 0.002007 seconds 
+  Import took 0.004640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.025811 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e2a31cbe3b1d0ad0dae1e417428c84') in 0.002750 seconds 
+  Import took 0.005464 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.467178 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031633d31cc3b24efba7705b7a378282') in 0.002040 seconds 
+  Import took 0.004945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.154673 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b6f244fbd408ace10a58f31a339951') in 0.002106 seconds 
+  Import took 0.004904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.740077 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '715d2ca6633666eaf05573019e28d24f') in 0.002661 seconds 
+  Import took 0.005730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.157686 seconds.
+  path: Assets/Scenes/JD/Audio/AudioMixer.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/AudioMixer.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e025cbe381dbf35ce41355bd363be8ed') in 0.002107 seconds 
+  Import took 0.005339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.386778 seconds.
+  path: Assets/Scenes/JD/Audio/MAIN.mixer
+  artifactKey: Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/MAIN.mixer using Guid(dfd076a1de0c0b14f9232d11b5b326d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e32b92329c4bcc23bd18f99a26ae440') in 0.002226 seconds 
+  Import took 0.004747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.625752 seconds.
+  path: Assets/Scenes/JD/Audio/Mixers
+  artifactKey: Guid(9a090cb9866048d4ca00caa46fae5867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JD/Audio/Mixers using Guid(9a090cb9866048d4ca00caa46fae5867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd10c262ccb5c12df7bc0c19838e58d9') in 0.001341 seconds 
+  Import took 0.003997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.965237 seconds.
+  path: Assets/Shared
+  artifactKey: Guid(621c75dd056aa79499eb03f40f5217ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shared using Guid(621c75dd056aa79499eb03f40f5217ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '637446fde41f5655f9c05a887fb530a1') in 0.001174 seconds 
+  Import took 0.004154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.547485 seconds.
+  path: Assets/Shared/Scenes
+  artifactKey: Guid(6bd565fd314710b46a06aa4bc6294092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shared/Scenes using Guid(6bd565fd314710b46a06aa4bc6294092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85a0613bc2f2de9b6411b27ec684757a') in 0.001201 seconds 
+  Import took 0.003753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.223110 seconds.
+  path: Assets/Shared/Resources
+  artifactKey: Guid(1b11855c916581c49b0ca61a718d6bf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shared/Resources using Guid(1b11855c916581c49b0ca61a718d6bf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c104b8224cb94c0a7ad64c2b6d8f22b') in 0.001234 seconds 
+  Import took 0.003833 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
