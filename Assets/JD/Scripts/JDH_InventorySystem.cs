@@ -67,6 +67,13 @@ namespace Sherbert.Inventory
             inventory.input.AXIS_ITEMDROP = Input.GetAxisRaw(inventory.input.ItemDropAxis);
             inventory.input.AXIS_ITEMCYCLE = Input.GetAxisRaw(inventory.input.ItemCycleAxis);
 
+            if(inventory.input.bAlsoCycleWithNumPadKeys)
+            {
+                if(Input.GetKeyDown(KeyCode.Alpha1)) CycleItem(0);
+                if(Input.GetKeyDown(KeyCode.Alpha2)) CycleItem(1);
+                if(Input.GetKeyDown(KeyCode.Alpha3)) CycleItem(2);
+            }
+
             if (inventory.input.AXIS_ITEMUSE > 0) UseItem();
             else if (inventory.input.AXIS_ITEMDROP > 0) DropItem();
             else if (inventory.input.AXIS_ITEMCYCLE != 0) CycleItem();
