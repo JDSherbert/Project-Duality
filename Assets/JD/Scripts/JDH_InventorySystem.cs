@@ -19,7 +19,7 @@ namespace Sherbert.Inventory
     public class JDH_InventorySystem : MonoBehaviour
     {
         public JDH_Item[] EquippedItems = new JDH_Item[InventorySettings.SIZE];
-        public int currentlySelectedIndex = 0;
+        public int currentSelection = 0;
 
         [System.Serializable]
         public class InventorySettings
@@ -52,6 +52,10 @@ namespace Sherbert.Inventory
 
         public Events events = new Events();
 
+        //____________________________________________________________________________________________________________________________________________
+        // Monobehaviour methods
+        //____________________________________________________________________________________________________________________________________________
+
         void Update()
         {
             InputHandler();
@@ -81,22 +85,22 @@ namespace Sherbert.Inventory
 
         public void UseItem()
         {
-            if (EquippedItems[currentlySelectedIndex].currentAmount > 0)
+            if (EquippedItems[currentSelection].currentAmount > 0)
             {
-                events.OnItemUsed.Invoke(EquippedItems[currentlySelectedIndex]);
-                if(EquippedItems[currentlySelectedIndex].type == JDH_Item.ItemType.Consumable) EquippedItems[currentlySelectedIndex].currentAmount--;
-                if(EquippedItems[currentlySelectedIndex].currentAmount == 0) EquippedItems[currentlySelectedIndex] = null;
+                events.OnItemUsed.Invoke(EquippedItems[currentSelection]);
+                if(EquippedItems[currentSelection].type == JDH_Item.ItemType.Consumable) EquippedItems[currentSelection].currentAmount--;
+                if(EquippedItems[currentSelection].currentAmount == 0) EquippedItems[currentSelection] = null;
             }
             else Debug.Log("No Item.");
         }
 
         public void DropItem()
         {
-            if (EquippedItems[currentlySelectedIndex].currentAmount > 0)
+            if (EquippedItems[currentSelection].currentAmount > 0)
             {
-                events.OnItemDropped.Invoke(EquippedItems[currentlySelectedIndex]);
-                EquippedItems[currentlySelectedIndex].currentAmount--;
-                if(EquippedItems[currentlySelectedIndex].currentAmount == 0) EquippedItems[currentlySelectedIndex] = null;
+                events.OnItemDropped.Invoke(EquippedItems[currentSelection]);
+                EquippedItems[currentSelection].currentAmount--;
+                if(EquippedItems[currentSelection].currentAmount == 0) EquippedItems[currentSelection] = null;
             }
             else Debug.Log("No Item.");
         }
@@ -134,22 +138,22 @@ namespace Sherbert.Inventory
 
         public void CycleItem()
         {
-            int NewIndex = currentlySelectedIndex;
+            int NewIndex = currentSelection;
             NewIndex += (int)inventory.input.AXIS_ITEMCYCLE;
 
             if (NewIndex > EquippedItems.Length) NewIndex = 0;
             if (NewIndex < 0) NewIndex = EquippedItems.Length;
 
-            currentlySelectedIndex = NewIndex;
-            events.OnItemCycle.Invoke(EquippedItems[currentlySelectedIndex]);
+            currentSelection = NewIndex;
+            events.OnItemCycle.Invoke(EquippedItems[currentSelection]);
         }
         public void CycleItem(int NewIndex)
         {
             if (NewIndex > EquippedItems.Length) NewIndex = EquippedItems.Length;
             if (NewIndex < 0) NewIndex = 0;
 
-            currentlySelectedIndex = NewIndex;
-            events.OnItemCycle.Invoke(EquippedItems[currentlySelectedIndex]);
+            currentSelection = NewIndex;
+            events.OnItemCycle.Invoke(EquippedItems[currentSelection]);
         }
 
     }

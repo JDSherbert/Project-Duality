@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 926d6c97ada98f44cac8406cddc13320, type: 3}
+  m_Name: '[Rune] U'
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -3088038593356266661, guid: fe14e7906e86b894b80af59b223c368b, type: 3}
+  letter: 85
+  description: 
+  runeObject: {fileID: 0}
