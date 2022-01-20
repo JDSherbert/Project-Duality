@@ -8,6 +8,8 @@
 
 namespace Sherbert.Inventory
 {
+    using System;
+    using System.Collections.Generic;
     using UnityEngine;
     using UnityEngine.Events;
 
@@ -154,6 +156,18 @@ namespace Sherbert.Inventory
 
             currentSelection = NewIndex;
             events.OnItemCycle.Invoke(EquippedItems[currentSelection]);
+        }
+
+        public List<JDH_Item> GetAllItems()
+        {
+            List<JDH_Item> itemList = new List<JDH_Item>(EquippedItems);
+            itemList.TrimExcess();
+            return itemList;
+        }
+
+        public void RemoveAllItems()
+        {
+            Array.Clear(EquippedItems, 0, EquippedItems.Length);
         }
 
     }

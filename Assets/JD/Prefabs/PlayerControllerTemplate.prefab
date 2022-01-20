@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2558534936246970692}
-  - component: {fileID: 2558534936246970690}
-  - component: {fileID: 2558534936246970693}
+  - component: {fileID: 8490775522289455598}
+  - component: {fileID: 8398887736426033339}
   m_Layer: 2
   m_Name: Sprite
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 2558534936954622161}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2558534936246970690
+--- !u!212 &8490775522289455598
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 1309974791
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2473534062835487147, guid: 31b1c94c33b80444791c0051e745f83b, type: 3}
+  m_Sprite: {fileID: -8501974817023376318, guid: 84eec7b7282f8e948a9105ee846baea3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2558534936246970693
+--- !u!95 &8398887736426033339
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 2558534936246970695}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 074efcbbdc34b444ca18399d20c544ff, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2ccff995b218c0049b3b7b5656d6e038, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
       startTime: 0
       distance: 0
       velocity: 0
-      spriteFlipX: 0
+      useFlipX: 0
     component:
       animator: {fileID: 0}
       rigidbody2D: {fileID: 0}
@@ -609,7 +609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2558534937139627720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4581839050211224833}
@@ -1307,7 +1307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7526523436008217722
 Transform:
   m_ObjectHideFlags: 0
@@ -1340,7 +1340,6 @@ MonoBehaviour:
   lexicon:
     state: 0
     TimeScaleWhileOpen: 0
-    defaultTimeScale: 0
     input:
       OpenCloseAxis: OpenLexicon
       AXIS_OPENCLOSE: 0

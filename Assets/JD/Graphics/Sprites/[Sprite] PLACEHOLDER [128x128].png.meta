@@ -1,0 +1,1476 @@
+fileFormatVersion: 2
+guid: 84eec7b7282f8e948a9105ee846baea3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3922011399896335669
+    second: PLACEHOLDER_128x128_0
+  - first:
+      213: -6593491142868381759
+    second: PLACEHOLDER_128x128_1
+  - first:
+      213: -1781931801919431410
+    second: PLACEHOLDER_128x128_2
+  - first:
+      213: 4182130575600458173
+    second: PLACEHOLDER_128x128_3
+  - first:
+      213: 7889393240143088902
+    second: PLACEHOLDER_128x128_4
+  - first:
+      213: -3879136280948099854
+    second: PLACEHOLDER_128x128_5
+  - first:
+      213: -4989838493761120281
+    second: PLACEHOLDER_128x128_6
+  - first:
+      213: 3475866966247545345
+    second: PLACEHOLDER_128x128_7
+  - first:
+      213: 4882199561071512417
+    second: '[Sprite] PLACEHOLDER_128x128_0'
+  - first:
+      213: 1173585218156995279
+    second: '[Sprite] PLACEHOLDER_128x128_1'
+  - first:
+      213: 2519535209872175324
+    second: '[Sprite] PLACEHOLDER_128x128_2'
+  - first:
+      213: 346313030997301132
+    second: '[Sprite] PLACEHOLDER_128x128_3'
+  - first:
+      213: 6717097690934606077
+    second: '[Sprite] PLACEHOLDER_128x128_4'
+  - first:
+      213: 705438886734886234
+    second: '[Sprite] PLACEHOLDER_128x128_5'
+  - first:
+      213: 6077361068743621106
+    second: '[Sprite] PLACEHOLDER_128x128_6'
+  - first:
+      213: 2033018973565697186
+    second: '[Sprite] PLACEHOLDER_128x128_7'
+  - first:
+      213: -7798348358677722569
+    second: '[Sprite] PLACEHOLDER_128x128_8'
+  - first:
+      213: -5106071793756118699
+    second: '[Sprite] PLACEHOLDER_128x128_9'
+  - first:
+      213: 6428107874652030599
+    second: '[Sprite] PLACEHOLDER_128x128_10'
+  - first:
+      213: -1697188950043358774
+    second: '[Sprite] PLACEHOLDER_128x128_11'
+  - first:
+      213: 6771344441441675969
+    second: '[Sprite] PLACEHOLDER_128x128_12'
+  - first:
+      213: 4157741064804412454
+    second: '[Sprite] PLACEHOLDER_128x128_13'
+  - first:
+      213: 7787016148390628571
+    second: '[Sprite] PLACEHOLDER_128x128_14'
+  - first:
+      213: 1196162287810165809
+    second: '[Sprite] PLACEHOLDER_128x128_15'
+  - first:
+      213: 4659143100381831599
+    second: '[Sprite] PLACEHOLDER_128x128_16'
+  - first:
+      213: 3381806268698050536
+    second: '[Sprite] PLACEHOLDER_128x128_17'
+  - first:
+      213: 4542928310372612062
+    second: '[Sprite] PLACEHOLDER_128x128_18'
+  - first:
+      213: 471280631638643723
+    second: '[Sprite] PLACEHOLDER_128x128_19'
+  - first:
+      213: 4080306669055991702
+    second: '[Sprite] PLACEHOLDER_128x128_20'
+  - first:
+      213: -3314799921958221950
+    second: '[Sprite] PLACEHOLDER_128x128_21'
+  - first:
+      213: -5998234268707421947
+    second: '[Sprite] PLACEHOLDER_128x128_22'
+  - first:
+      213: 8174035602137936323
+    second: '[Sprite] PLACEHOLDER_128x128_23'
+  - first:
+      213: -1024395335308830538
+    second: '[Sprite] PLACEHOLDER_128x128_24'
+  - first:
+      213: -5565839346393534327
+    second: '[Sprite] PLACEHOLDER_128x128_25'
+  - first:
+      213: -5210726422016430293
+    second: '[Sprite] PLACEHOLDER_128x128_26'
+  - first:
+      213: 7141217393223201241
+    second: '[Sprite] PLACEHOLDER_128x128_27'
+  - first:
+      213: -36264361981340673
+    second: '[Sprite] PLACEHOLDER_128x128_28'
+  - first:
+      213: 2460703653076221651
+    second: '[Sprite] PLACEHOLDER_128x128_29'
+  - first:
+      213: -5750577187695144167
+    second: '[Sprite] PLACEHOLDER_128x128_30'
+  - first:
+      213: -2540949105816349884
+    second: '[Sprite] PLACEHOLDER_128x128_31'
+  - first:
+      213: -5797897305520252887
+    second: '[Sprite] PLACEHOLDER_128x128_32'
+  - first:
+      213: 8841079363239900000
+    second: '[Sprite] PLACEHOLDER_128x128_33'
+  - first:
+      213: 6011896463356679140
+    second: '[Sprite] PLACEHOLDER_128x128_34'
+  - first:
+      213: 6117985088002492368
+    second: '[Sprite] PLACEHOLDER_128x128_35'
+  - first:
+      213: 4584629353559659303
+    second: '[Sprite] PLACEHOLDER_128x128_36'
+  - first:
+      213: 9053464804824373733
+    second: '[Sprite] PLACEHOLDER_128x128_37'
+  - first:
+      213: -8170026072803006
+    second: '[Sprite] PLACEHOLDER_128x128_38'
+  - first:
+      213: -2403400933899883535
+    second: '[Sprite] PLACEHOLDER_128x128_39'
+  - first:
+      213: -3611960045290024354
+    second: '[Sprite] PLACEHOLDER_128x128_40'
+  - first:
+      213: 3422644844119334975
+    second: '[Sprite] PLACEHOLDER_128x128_41'
+  - first:
+      213: 4683958094268515039
+    second: '[Sprite] PLACEHOLDER_128x128_42'
+  - first:
+      213: -5651408337230096744
+    second: '[Sprite] PLACEHOLDER_128x128_43'
+  - first:
+      213: -6939811919780159370
+    second: '[Sprite] PLACEHOLDER_128x128_44'
+  - first:
+      213: -1718780788754812282
+    second: '[Sprite] PLACEHOLDER_128x128_45'
+  - first:
+      213: -3812698623242146577
+    second: '[Sprite] PLACEHOLDER_128x128_46'
+  - first:
+      213: 7144103349504109495
+    second: '[Sprite] PLACEHOLDER_128x128_47'
+  - first:
+      213: -8501974817023376318
+    second: '[Sprite] PLACEHOLDER [128x128]_0'
+  - first:
+      213: 1753400343234843058
+    second: '[Sprite] PLACEHOLDER [128x128]_1'
+  - first:
+      213: 8909215254727087389
+    second: '[Sprite] PLACEHOLDER [128x128]_2'
+  - first:
+      213: -8629618576858803718
+    second: '[Sprite] PLACEHOLDER [128x128]_3'
+  - first:
+      213: -1346876713803680976
+    second: '[Sprite] PLACEHOLDER [128x128]_4'
+  - first:
+      213: 9174550843578015408
+    second: '[Sprite] PLACEHOLDER [128x128]_5'
+  - first:
+      213: -8665640663566906222
+    second: '[Sprite] PLACEHOLDER [128x128]_6'
+  - first:
+      213: 3287561626120022192
+    second: '[Sprite] PLACEHOLDER [128x128]_7'
+  - first:
+      213: -7585049833471316605
+    second: '[Sprite] PLACEHOLDER [128x128]_8'
+  - first:
+      213: -2562685364119151313
+    second: '[Sprite] PLACEHOLDER [128x128]_9'
+  - first:
+      213: 7438976546744165450
+    second: '[Sprite] PLACEHOLDER [128x128]_10'
+  - first:
+      213: -3155693560310556385
+    second: '[Sprite] PLACEHOLDER [128x128]_11'
+  - first:
+      213: 2677384349287149705
+    second: '[Sprite] PLACEHOLDER [128x128]_12'
+  - first:
+      213: -5493022851039668632
+    second: '[Sprite] PLACEHOLDER [128x128]_13'
+  - first:
+      213: -8808628094683618002
+    second: '[Sprite] PLACEHOLDER [128x128]_14'
+  - first:
+      213: 3785845239712571027
+    second: '[Sprite] PLACEHOLDER [128x128]_15'
+  - first:
+      213: 4707626683499668001
+    second: '[Sprite] PLACEHOLDER [128x128]_16'
+  - first:
+      213: -5325286870302714954
+    second: '[Sprite] PLACEHOLDER [128x128]_17'
+  - first:
+      213: 6267727844230414662
+    second: '[Sprite] PLACEHOLDER [128x128]_18'
+  - first:
+      213: 3528471435930023271
+    second: '[Sprite] PLACEHOLDER [128x128]_19'
+  - first:
+      213: -6836974094823568484
+    second: '[Sprite] PLACEHOLDER [128x128]_20'
+  - first:
+      213: -1975172679298417263
+    second: '[Sprite] PLACEHOLDER [128x128]_21'
+  - first:
+      213: 3772131171225875130
+    second: '[Sprite] PLACEHOLDER [128x128]_22'
+  - first:
+      213: -1938014978090286134
+    second: '[Sprite] PLACEHOLDER [128x128]_23'
+  - first:
+      213: -4929890199352156576
+    second: '[Sprite] PLACEHOLDER [128x128]_24'
+  - first:
+      213: 7620637539157483966
+    second: '[Sprite] PLACEHOLDER [128x128]_25'
+  - first:
+      213: -4834552319802532072
+    second: '[Sprite] PLACEHOLDER [128x128]_26'
+  - first:
+      213: -2584401699238857878
+    second: '[Sprite] PLACEHOLDER [128x128]_27'
+  - first:
+      213: 221161705698405637
+    second: '[Sprite] PLACEHOLDER [128x128]_28'
+  - first:
+      213: -335232142030933205
+    second: '[Sprite] PLACEHOLDER [128x128]_29'
+  - first:
+      213: 4776178384259532217
+    second: '[Sprite] PLACEHOLDER [128x128]_30'
+  - first:
+      213: 3847284673285358779
+    second: '[Sprite] PLACEHOLDER [128x128]_31'
+  - first:
+      213: -6620155218132863798
+    second: '[Sprite] PLACEHOLDER [128x128]_32'
+  - first:
+      213: 3440678293408854829
+    second: '[Sprite] PLACEHOLDER [128x128]_33'
+  - first:
+      213: 6724175832433067466
+    second: '[Sprite] PLACEHOLDER [128x128]_34'
+  - first:
+      213: 7583242152032629578
+    second: '[Sprite] PLACEHOLDER [128x128]_35'
+  - first:
+      213: -6294412907935611041
+    second: '[Sprite] PLACEHOLDER [128x128]_36'
+  - first:
+      213: -5955430927889665162
+    second: '[Sprite] PLACEHOLDER [128x128]_37'
+  - first:
+      213: 355866519441950024
+    second: '[Sprite] PLACEHOLDER [128x128]_38'
+  - first:
+      213: -3289687327010458517
+    second: '[Sprite] PLACEHOLDER [128x128]_39'
+  - first:
+      213: -8753532803899656219
+    second: '[Sprite] PLACEHOLDER [128x128]_40'
+  - first:
+      213: 4735512528659018625
+    second: '[Sprite] PLACEHOLDER [128x128]_41'
+  - first:
+      213: -3268735438463315480
+    second: '[Sprite] PLACEHOLDER [128x128]_42'
+  - first:
+      213: 3840985598039915615
+    second: '[Sprite] PLACEHOLDER [128x128]_43'
+  - first:
+      213: -4819379379003827247
+    second: '[Sprite] PLACEHOLDER [128x128]_44'
+  - first:
+      213: 3586709641270674734
+    second: '[Sprite] PLACEHOLDER [128x128]_45'
+  - first:
+      213: 8090339865322990819
+    second: '[Sprite] PLACEHOLDER [128x128]_46'
+  - first:
+      213: 8656980711209952601
+    second: '[Sprite] PLACEHOLDER [128x128]_47'
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_0'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244410603fae20a80800000000000000
+      internalID: -8501974817023376318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_1'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b19f8f7254555810800000000000000
+      internalID: 1753400343234843058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_2'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15df753214e3ab70800000000000000
+      internalID: 8909215254727087389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_3'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1183340af6d3880800000000000000
+      internalID: -8629618576858803718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_4'
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0337c7dc3ceee4de0800000000000000
+      internalID: -1346876713803680976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_5'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be5a35226d825f70800000000000000
+      internalID: 9174550843578015408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_6'
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c0ae0aab57db780800000000000000
+      internalID: -8665640663566906222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_7'
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8e61671e3cf9d20800000000000000
+      internalID: 3287561626120022192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_8'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d6e402d5d7cb690800000000000000
+      internalID: -7585049833471316605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_9'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2dd5903d338f6cd0800000000000000
+      internalID: -2562685364119151313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_10'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44e52181cd8c3760800000000000000
+      internalID: 7438976546744165450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_11'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1993bd2d69b434d0800000000000000
+      internalID: -3155693560310556385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_12'
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980737a51eaf72520800000000000000
+      internalID: 2677384349287149705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_13'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8665dacf1dcd4c3b0800000000000000
+      internalID: -5493022851039668632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_14'
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e256bd10b6771c580800000000000000
+      internalID: -8808628094683618002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_15'
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39edbafef260a8430800000000000000
+      internalID: 3785845239712571027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_16'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122e52dc689d45140800000000000000
+      internalID: 4707626683499668001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_17'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b31e885ec7c816b0800000000000000
+      internalID: -5325286870302714954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_18'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641cd2834417bf650800000000000000
+      internalID: 6267727844230414662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_19'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765b8ba8316a7f030800000000000000
+      internalID: 3528471435930023271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_20'
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b4e7bd8403e11a0800000000000000
+      internalID: -6836974094823568484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_21'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d7c50c9e6c694e0800000000000000
+      internalID: -1975172679298417263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_22'
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2b81b805d495430800000000000000
+      internalID: 3772131171225875130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_23'
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3ca8d35a9ca15e0800000000000000
+      internalID: -1938014978090286134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_24'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e5fedbbf2859bb0800000000000000
+      internalID: -4929890199352156576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_25'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb12d7b4771f1c960800000000000000
+      internalID: 7620637539157483966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_26'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f112a974838ecb0800000000000000
+      internalID: -4834552319802532072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_27'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63b3f7e85c522cd0800000000000000
+      internalID: -2584401699238857878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_28'
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50da21a4669b11300800000000000000
+      internalID: 221161705698405637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_29'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23f3f89424095bf0800000000000000
+      internalID: -335232142030933205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_30'
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b540b96fe4684240800000000000000
+      internalID: 4776178384259532217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_31'
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb48afcc60d446530800000000000000
+      internalID: 3847284673285358779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_32'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4fd3977eb7024a0800000000000000
+      internalID: -6620155218132863798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_33'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d233809adaebfbf20800000000000000
+      internalID: 3440678293408854829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_34'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5807b1b42115d50800000000000000
+      internalID: 6724175832433067466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_35'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a437cad3f861d3960800000000000000
+      internalID: 7583242152032629578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_36'
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f574dd83fc0c5a8a0800000000000000
+      internalID: -6294412907935611041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_37'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673f2c2df1f0a5da0800000000000000
+      internalID: -5955430927889665162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_38'
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845cac6c6ba40f400800000000000000
+      internalID: 355866519441950024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_39'
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64ff6b3ecea852d0800000000000000
+      internalID: -3289687327010458517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_40'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7f4d50b44358680800000000000000
+      internalID: -8753532803899656219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_41'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183f1241e8be7b140800000000000000
+      internalID: 4735512528659018625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_42'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1d9adef6e13a2d0800000000000000
+      internalID: -3268735438463315480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_43'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c7f8e0d0ced4530800000000000000
+      internalID: 3840985598039915615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_44'
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db52ac2dff1e1db0800000000000000
+      internalID: -4819379379003827247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_45'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2548606a6d86c130800000000000000
+      internalID: 3586709641270674734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_46'
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec22c83e39a64070800000000000000
+      internalID: 8090339865322990819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] PLACEHOLDER [128x128]_47'
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955e3171716c32870800000000000000
+      internalID: 8656980711209952601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

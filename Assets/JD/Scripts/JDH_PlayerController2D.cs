@@ -55,7 +55,7 @@ namespace Sherbert.Framework
                 public float distance;
                 public float velocity;
 
-                public bool spriteFlipX = false;
+                public bool useFlipX = false;
             }
             public LocomotionSettings locomotion = new LocomotionSettings();
 
@@ -171,15 +171,21 @@ namespace Sherbert.Framework
                 player.locomotion.speed);
             
             //? Flip Sprite
-            if(player.component.spriteRenderer) player.component.spriteRenderer.flipX = player.locomotion.nextMoveCommand.x >= 0 ? true : false;
+            if(player.component.spriteRenderer && player.locomotion.useFlipX) 
+                player.component.spriteRenderer.flipX = player.locomotion.nextMoveCommand.x >= 0 ? true : false;
         }
 
         void UpdateAnimator(Vector3 direction)
         {
-            if (player.component.animator)
+            if (player.component.animator && !player.locomotion.useFlipX)
             {
                 player.component.animator.SetInteger("WalkX", direction.x < 0 ? -1 : direction.x > 0 ? 1 : 0);
-                player.component.animator.SetInteger("WalkY", direction.y < 0 ? 1 : direction.y > 0 ? -1 : 0);
+                player.component.animator.SetInteger("WalkY", direction.y < 0 ? -1 : direction.y > 0 ? 1 : 0);
+            }
+            else //? Use LEFT sprite
+            {
+                player.component.animator.SetInteger("WalkX", direction.x < 0 ? -1 : direction.x > 0 ? -1 : 0);
+                player.component.animator.SetInteger("WalkY", direction.y < 0 ? -1 : direction.y > 0 ? 1 : 0);
             }
         }
 

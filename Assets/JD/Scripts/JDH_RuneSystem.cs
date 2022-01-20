@@ -12,6 +12,8 @@ namespace Sherbert.Lexicon
     using UnityEngine;
     using UnityEngine.Events;
 
+    using Sherbert.GameplayStatics;
+
     /// <summary>
     ///____________________________________________________________________________________________________________________________________________________
     /// System Component that manipulates how items are stored and used.
@@ -33,7 +35,6 @@ namespace Sherbert.Lexicon
             public State state = State.Closed;
 
             [Range(0.0f, 1.0f)] public float TimeScaleWhileOpen = 0.0f;
-            [HideInInspector] public float defaultTimeScale = 1;
 
             [System.Serializable]
             public class InputSettings
@@ -65,11 +66,6 @@ namespace Sherbert.Lexicon
         // Monobehaviour methods
         //____________________________________________________________________________________________________________________________________________
 
-        void Awake()
-        {
-            Init();
-        }
-
         void Update()
         {
             InputHandler();
@@ -94,19 +90,19 @@ namespace Sherbert.Lexicon
         {
             component.LexiconMenuUI.SetActive(true);
             events.OnLexiconOpen.Invoke();
-            Time.timeScale = lexicon.TimeScaleWhileOpen;
+            JDH_World.SetWorldSpeed(lexicon.TimeScaleWhileOpen);
 
         }
         public void CloseLexiconMenu()
         {
             component.LexiconMenuUI.SetActive(false);
             events.OnLexiconClose.Invoke();
-            Time.timeScale = lexicon.defaultTimeScale;
+            JDH_World.ResetWorldSpeed();
         }
 
-        void Init()
+        public List<JDH_Rune> GetAllRunes()
         {
-            lexicon.defaultTimeScale = Time.timeScale;
+            return DiscoveredRunes;
         }
     }
 }
