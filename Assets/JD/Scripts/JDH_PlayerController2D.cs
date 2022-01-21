@@ -55,6 +55,7 @@ namespace Sherbert.Framework
                 public float distance;
                 public float velocity;
 
+                [Tooltip("Play the sprite's LEFT animation but flipped when walking.")]
                 public bool useFlipX = false;
             }
             public LocomotionSettings locomotion = new LocomotionSettings();
@@ -182,7 +183,7 @@ namespace Sherbert.Framework
                 player.component.animator.SetInteger("WalkX", direction.x < 0 ? -1 : direction.x > 0 ? 1 : 0);
                 player.component.animator.SetInteger("WalkY", direction.y < 0 ? -1 : direction.y > 0 ? 1 : 0);
             }
-            else //? Use LEFT sprite
+            else //? Use LEFT sprite flipped
             {
                 player.component.animator.SetInteger("WalkX", direction.x < 0 ? -1 : direction.x > 0 ? -1 : 0);
                 player.component.animator.SetInteger("WalkY", direction.y < 0 ? -1 : direction.y > 0 ? 1 : 0);

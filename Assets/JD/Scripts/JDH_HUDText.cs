@@ -22,7 +22,7 @@ namespace Sherbert.Tools.Text
     /// Note: Supports both TMPro and Legacy Text.
     ///____________________________________________________________________________________________________________________________________________
     /// </summary>
-    public class JDH_TextSystem : MonoBehaviour
+    public class JDH_HUDText : JDH_TextSystemBase
     {
         [System.Serializable]
         public class TextSettings
@@ -47,31 +47,12 @@ namespace Sherbert.Tools.Text
         public TextSettings txt = new TextSettings();
 
         [System.Serializable]
-        public class Components
-        {
-            [Tooltip("Text box.")]
-            public Text txt_TextBox;
-            [Tooltip("TMPro text box.")]
-            public TextMeshProUGUI tmp_TextBox;
-        }
-
-        public Components component = new Components();
-
-        [System.Serializable]
         public class Events
         {
             public UnityEvent<string> OnWriteText;
         }
 
         public Events events = new Events();
-
-        [System.Serializable]
-        public enum TextType
-        {
-            LegacyText, TMPro
-        }
-
-        public TextType txtype = new TextType();
 
         //____________________________________________________________________________________________________________________________________________
         // Monobehaviour methods
@@ -146,7 +127,7 @@ namespace Sherbert.Tools.Text
         {
             switch (txtype)
             {
-                case (TextType.LegacyText):
+                case (TextType.Legacy):
                     Txt_FadeEffect();
                     break;
                 case (TextType.TMPro):
@@ -207,16 +188,16 @@ namespace Sherbert.Tools.Text
             }
         }
 
-        void Init()
+        protected override void Init()
         {
             if (!component.txt_TextBox && !component.tmp_TextBox && GetComponent<Text>()) component.txt_TextBox = GetComponent<Text>();
             else if (!component.txt_TextBox && !component.tmp_TextBox && GetComponent<TextMeshProUGUI>()) component.tmp_TextBox = GetComponent<TextMeshProUGUI>();
 
             //? Set TextBox Type
-            if (component.txt_TextBox != null) txtype = TextType.LegacyText;
+            if (component.txt_TextBox != null) txtype = TextType.Legacy;
             if (component.tmp_TextBox != null) txtype = TextType.TMPro;
 
-            if (txtype == TextType.LegacyText)
+            if (txtype == TextType.Legacy)
             {
                 component.txt_TextBox.verticalOverflow = VerticalWrapMode.Overflow;
                 txt.startColour = component.txt_TextBox.color;

@@ -100,6 +100,11 @@ namespace Sherbert.Lexicon
             JDH_World.ResetWorldSpeed();
         }
 
+        public void UnlockRune(JDH_Rune NewRune)
+        {
+            if(!DiscoveredRunes.Contains(NewRune)) DiscoveredRunes.Add(NewRune);
+        }
+
         public List<JDH_Rune> GetAllRunes()
         {
             return DiscoveredRunes;

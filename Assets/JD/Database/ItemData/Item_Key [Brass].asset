@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: KEY0001
   type: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 348a932dc3964d142825295b8247c681, type: 3}
   itemObject: {fileID: 0}
   itemName: Brass Key
   description: A key used for unlocking generic doors and chests.
