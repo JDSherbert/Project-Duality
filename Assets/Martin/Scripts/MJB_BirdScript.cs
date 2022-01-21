@@ -13,7 +13,14 @@ public class MJB_BirdScript : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+        else
+        {
+            player = null;
+        }
     }
 
     private void FixedUpdate()
@@ -41,10 +48,13 @@ public class MJB_BirdScript : MonoBehaviour
 
     private void ChasePlayer()
     {
-        transform.Translate((player.transform.position - transform.position) * Time.deltaTime * chaseSpeed);
+        if (player != null)
+        {
+            transform.Translate((player.transform.position - transform.position) * Time.deltaTime * chaseSpeed);
+        }
     }
 
-    private void PlayerInteraction(GameObject player)
+    private void PlayerInteraction(GameObject playerObject)
     {
         // Kill the player here
     }

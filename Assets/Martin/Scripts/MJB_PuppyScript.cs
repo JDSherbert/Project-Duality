@@ -19,7 +19,14 @@ public class MJB_PuppyScript : MonoBehaviour
     {
         direction = new Vector3(1, 0, 0);
         direction.Normalize();
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+        else
+        {
+            player = null;
+        }
     }
 
     private void FixedUpdate()
@@ -146,19 +153,25 @@ public class MJB_PuppyScript : MonoBehaviour
 
     private void CheckPlayerDistance()
     {
-        if (Vector3.Distance(player.transform.position, transform.position) <= 15)
+        if (player != null)
         {
-            chasing = true;
-            direction = player.transform.position - transform.position;
-            direction.Normalize();
+            if (Vector3.Distance(player.transform.position, transform.position) <= 15)
+            {
+                chasing = true;
+                direction = player.transform.position - transform.position;
+                direction.Normalize();
+            }
         }
     }
 
     private void Chase()
     {
-        direction = player.transform.position - transform.position;
-        direction.Normalize();
-        transform.Translate(direction * Time.deltaTime * chaseSpeed);
+        if (player != null)
+        {
+            direction = player.transform.position - transform.position;
+            direction.Normalize();
+            transform.Translate(direction * Time.deltaTime * chaseSpeed);
+        }
     }
 
     private void ChaseDistraction()
@@ -168,7 +181,7 @@ public class MJB_PuppyScript : MonoBehaviour
         transform.Translate(direction * Time.deltaTime * chaseSpeed);
     }
 
-    private void PlayerInteraction(GameObject player)
+    private void PlayerInteraction(GameObject playerObject)
     {
         // Dim lights here 
         Destroy(gameObject);
