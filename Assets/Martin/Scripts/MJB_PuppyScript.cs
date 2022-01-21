@@ -56,7 +56,7 @@ public class MJB_PuppyScript : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player"))
         {
-            // Run puppy-player interaction here
+            PlayerInteraction(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("Bird"))
         {
@@ -166,6 +166,12 @@ public class MJB_PuppyScript : MonoBehaviour
         direction = currentDistraction.transform.position - transform.position;
         direction.Normalize();
         transform.Translate(direction * Time.deltaTime * chaseSpeed);
+    }
+
+    private void PlayerInteraction(GameObject player)
+    {
+        // Dim lights here 
+        Destroy(gameObject);
     }
 
     private void BirdInteraction(GameObject bird)

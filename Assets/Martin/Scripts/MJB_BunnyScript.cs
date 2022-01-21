@@ -38,7 +38,7 @@ public class MJB_BunnyScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Run bunny-player interaction here
+            PlayerInteraction(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("Puppy"))
         {
@@ -76,6 +76,12 @@ public class MJB_BunnyScript : MonoBehaviour
             lastSoundLocation = location;
             chasing = true;
         }
+    }
+
+    private void PlayerInteraction(GameObject player)
+    {
+        // Add heavy onto player weight here
+        Destroy(gameObject);
     }
 
     private void PuppyInteraction(GameObject puppy)
