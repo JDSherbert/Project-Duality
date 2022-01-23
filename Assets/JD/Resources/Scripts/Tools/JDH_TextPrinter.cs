@@ -21,17 +21,27 @@ namespace Sherbert.Tools.Text
     /// </summary>
     public class JDH_TextPrinter : JDH_TextSystemBase
     {
-        [TextArea] [Tooltip("Text to print.")]
+        [TextArea]
+        [Tooltip("Text to print.")]
         public string payload;
 
         [System.Serializable]
         public class PrinterSettings
         {
-            public const float PRINTCONST = 0.5f;
-            [Range(0.0f, PRINTCONST)] public float printSpacing = 0.025f;
+            public const float PRINTMAXSPACING = 0.5f;
+            [Range(0.0f, PRINTMAXSPACING)] public float printSpacing = 0.025f;
+
+            public const float DELAYSPACE = 0.1f;
             public bool bPrintOnAwake = false;
         }
         public PrinterSettings printer = new PrinterSettings();
+
+        [System.Serializable]
+        public class TextCodes
+        {
+            public const char DELAY = '[';
+        }
+        public TextCodes chars = new TextCodes();
 
         [System.Serializable]
         public class Events
@@ -39,6 +49,7 @@ namespace Sherbert.Tools.Text
             public UnityEvent OnStartPrintPayload;
             public UnityEvent<char> OnPrintChar;
             public UnityEvent<string> OnFinishPrintPayload;
+            public UnityEvent OnTextCleared;
         }
         public Events events = new Events();
 
@@ -49,7 +60,7 @@ namespace Sherbert.Tools.Text
         void Awake()
         {
             Init();
-            if(printer.bPrintOnAwake) StartPrint();
+            if (printer.bPrintOnAwake) StartPrint();
         }
 
         //____________________________________________________________________________________________________________________________________________
@@ -68,21 +79,40 @@ namespace Sherbert.Tools.Text
         public IEnumerator PrintText(string Text)
         {
             events.OnStartPrintPayload.Invoke();
-            foreach(char c in Text)
+            foreach (char c in Text)
             {
                 yield return new WaitForSeconds(printer.printSpacing);
-                switch(txtype)
+
+                if (c == TextCodes.DELAY) yield return new WaitForSeconds(PrinterSettings.DELAYSPACE);
+                else
                 {
-                    case(TextType.Legacy):
-                        component.txt_TextBox.text += c;
-                        break;
-                    case(TextType.TMPro):
-                        component.tmp_TextBox.text += c;
-                        break;
+                    switch (txtype)
+                    {
+                        case (TextType.Legacy):
+                            component.txt_TextBox.text += c;
+                            break;
+                        case (TextType.TMPro):
+                            component.tmp_TextBox.text += c;
+                            break;
+                    }
+                    events.OnPrintChar.Invoke(c);
                 }
-                events.OnPrintChar.Invoke(c);
             }
             events.OnFinishPrintPayload.Invoke(Text);
+        }
+
+        public void ClearText()
+        {
+            switch (txtype)
+            {
+                case (TextType.Legacy):
+                    component.txt_TextBox.text = "";
+                    break;
+                case (TextType.TMPro):
+                    component.tmp_TextBox.text = "";
+                    break;
+            }
+            events.OnTextCleared.Invoke();
         }
 
     }

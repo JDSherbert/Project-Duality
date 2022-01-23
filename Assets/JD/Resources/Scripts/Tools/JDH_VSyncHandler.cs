@@ -10,28 +10,17 @@ namespace Sherbert.Tools.UI
 {
     using UnityEngine;
 
-    using Sherbert.Application;
-    
     /// <summary>
     ///________________________________________________________________________________________________________________________________________________________
-    /// Main menu component that handles calls to application manager from buttons or other UI elements that require a physical object instance.
+    /// Handles VSync in-app. Useful when a physical object reference is needed, such as from an event.
     ///________________________________________________________________________________________________________________________________________________________
     /// </summary>
-    public class JDH_MainMenuHandler : MonoBehaviour
+    public class JDH_VSyncHandler : MonoBehaviour
     {
-        public void PlayGame(int FirstLevel)
+        public void SetVSync(bool bVSync)
         {
-            JDH_ApplicationManager.LoadSceneAsync(FirstLevel);
-        }
-
-        public void QuitGame()
-        {
-            JDH_ApplicationManager.QuitApplication();
-        }
-
-        public void LoadURL(int Index = 0)
-        {
-            JDH_ApplicationManager.OpenURLPayload(JDH_ExternalLinks.URL_Payloads[Index]);
+            if(bVSync)  QualitySettings.vSyncCount = 1;
+            else  QualitySettings.vSyncCount = 0;
         }
     }
 }

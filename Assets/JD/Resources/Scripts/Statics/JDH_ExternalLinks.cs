@@ -17,16 +17,25 @@ namespace Sherbert.Application
     {
         public static string[] URL_Payloads = 
         {
-            //Main
+            //JD
             "https://twitter.com/JDSherbert_",
+            "https://github.com/JDSherbert",
+            "https://linktr.ee/JDSherbert",
+
+            //Amy
             "http://twitter.com/Amysaurus121",
-            
-            //Contributors
+
+            //Martin
             "https://twitter.com/MJimbobBrockett",
+            "https://linktr.ee/MartinJimbobBrockett",
+
+            //Contributors
             "https://twitter.com/VerzatileDev",
+            "https://www.artstation.com/verzatiledev",
 
             //Special Thanks
-            "https://twitter.com/U_K_L_"
+            "https://twitter.com/U_K_L_",
+            "https://github.com/U-K-L"
         };
 
         public static string[] URL_Gamepage = 

@@ -8,30 +8,42 @@
 
 namespace Sherbert.Tools.UI
 {
+    using System.Collections.Generic;
     using UnityEngine;
+    using UnityEngine.UI;
+    using UnityEngine.Audio;
 
-    using Sherbert.Application;
-    
+    using TMPro;
+
     /// <summary>
     ///________________________________________________________________________________________________________________________________________________________
-    /// Main menu component that handles calls to application manager from buttons or other UI elements that require a physical object instance.
+    /// Handles audio in-app. Useful when a physical object reference is needed, such as from an event.
     ///________________________________________________________________________________________________________________________________________________________
     /// </summary>
-    public class JDH_MainMenuHandler : MonoBehaviour
+    public class JDH_AudioHandler : MonoBehaviour
     {
-        public void PlayGame(int FirstLevel)
-        {
-            JDH_ApplicationManager.LoadSceneAsync(FirstLevel);
-        }
+        public const string MASTER = "Volume [Master]";
+        public const string SFX = "Volume [SFX]";
+        public const string UI = "Volume [UI]";
+        public const string MUSIC = "Volume [Music]";
 
-        public void QuitGame()
-        {
-            JDH_ApplicationManager.QuitApplication();
-        }
+        public AudioMixer audioMixer;
 
-        public void LoadURL(int Index = 0)
+        public void SetMasterBusVolume(float NewVolume)
         {
-            JDH_ApplicationManager.OpenURLPayload(JDH_ExternalLinks.URL_Payloads[Index]);
+            audioMixer.SetFloat(MASTER, NewVolume);
+        }
+        public void SetSFXBusVolume(float NewVolume)
+        {
+            audioMixer.SetFloat(SFX, NewVolume);
+        }
+        public void SetUIBusVolume(float NewVolume)
+        {
+            audioMixer.SetFloat(UI, NewVolume);
+        }
+        public void SetMusicBusVolume(float NewVolume)
+        {
+            audioMixer.SetFloat(MUSIC, NewVolume);
         }
     }
 }

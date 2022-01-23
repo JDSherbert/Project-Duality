@@ -31,7 +31,7 @@ namespace Sherbert.Tools.Systems
             [Tooltip("Amount of progression towards the load.")]
             public float progress = 0.0f;
             [Tooltip("Scene Payload to load.")]
-            public Scene scenePayload;
+            public int sceneBuildIndex = -1;
         }
         public LoadSettings loader = new LoadSettings();
 
@@ -40,7 +40,7 @@ namespace Sherbert.Tools.Systems
         {
             public UnityEvent OnLoadOpStart;
             public UnityEvent<float> OnLoadOpUpdate;
-            public UnityEvent<Scene> OnLoadOpComplete;
+            public UnityEvent<int> OnLoadOpComplete; //Buildindex
         }
         public Events events = new Events();
 
@@ -52,35 +52,69 @@ namespace Sherbert.Tools.Systems
 
         public IEnumerator LoadAsyncOperation()
         {
-            loader.scenePayload = SceneManager.GetActiveScene();
+            loader.sceneBuildIndex = JDH_ApplicationManager.NextSceneBuildIndex;
             yield return new WaitForSeconds(1);
 
-            if (loader.scenePayload != null || loader.scenePayload.buildIndex > -1)
-            {
-                AsyncOperation gamelevel = SceneManager.LoadSceneAsync(loader.scenePayload.buildIndex);
-                loader.progress = gamelevel.progress;
-
+            if (loader.sceneBuildIndex > -1)
+            {                
                 yield return new WaitForSeconds(LoadSettings.ASYNCDELAY);
+                AsyncOperation gamelevel = SceneManager.LoadSceneAsync(loader.sceneBuildIndex);
+                loader.progress = gamelevel.progress;
 
                 while (loader.progress < 1)
                 {
                     if (loader.progress != gamelevel.progress) events.OnLoadOpUpdate.Invoke(gamelevel.progress);
-                    if (gamelevel.progress >= 1) events.OnLoadOpComplete.Invoke(loader.scenePayload);
+                    if (gamelevel.progress >= 1) events.OnLoadOpComplete.Invoke(loader.sceneBuildIndex);
                     yield return new WaitForEndOfFrame();
                 }
             }
         }
 
+        public IEnumerator FakeLoadOperation() //! Use this for small games that are loading too quickly!
+        {
+            loader.sceneBuildIndex = JDH_ApplicationManager.NextSceneBuildIndex;
+            yield return new WaitForSeconds(1);
+
+            if (loader.sceneBuildIndex > -1)
+            {              
+                float loadbar = 0.0f;
+                float loadbarlast = 0.0f;
+
+                while (true)
+                {
+                    if (loadbar != loadbarlast) 
+                    {
+                        events.OnLoadOpUpdate.Invoke(loadbar);
+                        loadbarlast = loadbar;
+                    }
+                    if (loadbar >= 1.0f) 
+                    {
+                        events.OnLoadOpComplete.Invoke(loader.sceneBuildIndex);
+                        yield return new WaitForSeconds(LoadSettings.ASYNCDELAY);
+                        AsyncOperation gamelevel = SceneManager.LoadSceneAsync(loader.sceneBuildIndex);
+                    }
+                    
+                    //? Random discload style stops
+                    if(Random.Range(0, 2000) >= 1980) yield return new WaitForSeconds(Random.Range(0, 3.0f)); 
+                    
+                    loadbar += Random.Range(0, 0.0025f);
+                    yield return new WaitForEndOfFrame();
+                }
+            }
+        }
+
+
         public void ForceLoad()
         {
-            SceneManager.LoadScene(loader.scenePayload.buildIndex);
+            SceneManager.LoadScene(loader.sceneBuildIndex);
         }
 
         void Init()
         {
-            loader.scenePayload = JDH_ApplicationManager.NextScenePayload;
+            loader.sceneBuildIndex = JDH_ApplicationManager.NextSceneBuildIndex;
             events.OnLoadOpStart.Invoke();
-            StartCoroutine(LoadAsyncOperation());
+            //StartCoroutine(LoadAsyncOperation());
+            StartCoroutine(FakeLoadOperation());
         }
     }
 }

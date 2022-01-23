@@ -19,7 +19,7 @@ namespace Sherbert.Application
     public static class JDH_ApplicationManager
     {
         public const int LOADINGSCREENBUILDINDEX = 1;
-        public static Scene NextScenePayload;
+        public static int NextSceneBuildIndex; //! For some reason, Scene does not work so we are now using Build Index
 
         public static void OpenURLPayload(int Index = 0)
         {
@@ -45,16 +45,17 @@ namespace Sherbert.Application
 	        #endif
         }
 
-        //? Load Async Operations
+        //? Load Async Operations which also handle LoadScreen transition and calls
         public static void LoadSceneAsync(int BuildIndex = 0)
         {
             BuildIndex = Mathf.Clamp(BuildIndex, 0, SceneManager.sceneCountInBuildSettings);
-            NextScenePayload = SceneManager.GetSceneByBuildIndex(BuildIndex);
+            NextSceneBuildIndex = BuildIndex;
             SceneManager.LoadSceneAsync(JDH_ApplicationManager.LOADINGSCREENBUILDINDEX);
         }
         public static void LoadSceneAsync(string SceneName)
         {
-            NextScenePayload = SceneManager.GetSceneByName(SceneName);
+            Scene scene = SceneManager.GetSceneByName(SceneName);
+            NextSceneBuildIndex = scene.buildIndex;
             SceneManager.LoadSceneAsync(JDH_ApplicationManager.LOADINGSCREENBUILDINDEX);
         }
 
@@ -73,6 +74,5 @@ namespace Sherbert.Application
         {
             ForceLoadLevel(SceneManager.GetActiveScene().buildIndex);
         }
-
     }
 }

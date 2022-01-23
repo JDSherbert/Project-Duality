@@ -10,28 +10,16 @@ namespace Sherbert.Tools.UI
 {
     using UnityEngine;
 
-    using Sherbert.Application;
-    
     /// <summary>
     ///________________________________________________________________________________________________________________________________________________________
-    /// Main menu component that handles calls to application manager from buttons or other UI elements that require a physical object instance.
+    /// Sets a quality based on a passed in integer. Requires a physical object reference because of events.
     ///________________________________________________________________________________________________________________________________________________________
     /// </summary>
-    public class JDH_MainMenuHandler : MonoBehaviour
+    public class JDH_QualityHandler : MonoBehaviour
     {
-        public void PlayGame(int FirstLevel)
+        public void SetQuality(int Quality)
         {
-            JDH_ApplicationManager.LoadSceneAsync(FirstLevel);
-        }
-
-        public void QuitGame()
-        {
-            JDH_ApplicationManager.QuitApplication();
-        }
-
-        public void LoadURL(int Index = 0)
-        {
-            JDH_ApplicationManager.OpenURLPayload(JDH_ExternalLinks.URL_Payloads[Index]);
+            QualitySettings.SetQualityLevel(Quality);
         }
     }
 }
