@@ -1,13 +1,16 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-
 using Sherbert.AI;
 using Sherbert.GameplayStatics;
+using Sherbert.Framework;
 
 public class MJB_BirdScript : JDH_AIBaseFramework
 {
-    public float cooldown = 3.0f;
-    public float spawnDelay = 3.0f;
+    [SerializeField] private float cooldown = 3.0f;
+    [SerializeField] private float spawnDelay = 3.0f;
+
+    private Vector3 lastPlayerPosition;
 
     void Start()
     {
@@ -31,23 +34,63 @@ public class MJB_BirdScript : JDH_AIBaseFramework
         }
     }
 
+    public override void InitializeAI()
+    {
+        base.InitializeAI();
+        baseProperties.target = base.AcquireTarget();
+        baseProperties.chaseSpeed = 5.0f;
+    }
+
+    public override void BehaviourHandler()
+    {
+        base.BehaviourHandler();
+        if (JDH_World.GetWorldIsEvil())
+        {
+            if (baseProperties.chasing)
+            {
+                base.events.OnDetectPlayer.Invoke(base.baseProperties.target);
+                ChasePlayer();
+            }
+        }
+    }
+
     private void ChasePlayer()
     {
         if (baseProperties.target != null)
         {
-            transform.Translate((baseProperties.target.transform.position - transform.position) * Time.deltaTime * baseProperties.chaseSpeed);
+            if (CanStillSeePlayer())
+            {
+                transform.Translate((baseProperties.target.transform.position - transform.position) * Time.deltaTime * baseProperties.chaseSpeed);
+            }
+            else
+            {
+                transform.Translate((lastPlayerPosition - transform.position) * Time.deltaTime * baseProperties.chaseSpeed);
+            }
         }
+    }
+
+    private bool CanStillSeePlayer()
+    {
+        Vector3 playerDirection = baseProperties.target.transform.position - transform.position;
+        playerDirection.Normalize();
+        RaycastHit2D checkForPlayer = Physics2D.Raycast(transform.position + playerDirection, playerDirection);
+        if (checkForPlayer.collider.gameObject.CompareTag(EntityTypes.PLAYER))
+        {
+            lastPlayerPosition = checkForPlayer.collider.gameObject.transform.position;
+            return true;
+        }
+        return false;
     }
 
     private void PlayerInteraction(GameObject playerObject)
     {
-        // Kill the player here
+        playerObject.GetComponent<JDH_HealthSystem>().DealDamage();
     }
 
     private void BunnyInteraction(GameObject bunny)
     {
         StartCoroutine(SpawnKind(bunny.transform.position));
-        Destroy(bunny);
+        bunny.GetComponent<JDH_HealthSystem>().DealDamage();
     }
 
     public void TriggerBird()
@@ -71,32 +114,6 @@ public class MJB_BirdScript : JDH_AIBaseFramework
         Instantiate(baseProperties.self, spawnPosition, transform.rotation);
     }
 
-    //!------------- VIRTUAL METHODS ----------------!//
-
-    //! Override - Sets defaults
-    public override void InitializeAI()
-    {
-        base.InitializeAI();
-        baseProperties.target = base.AcquireTarget();
-        baseProperties.chaseSpeed = 5.0f;
-
-    }
-
-    //! Override - update behaviour
-    public override void BehaviourHandler()
-    {
-        base.BehaviourHandler();
-        if (JDH_World.GetWorldIsEvil())
-        {
-            if (baseProperties.chasing)
-            {
-                base.events.OnDetectPlayer.Invoke(base.baseProperties.target);
-                ChasePlayer();
-            }
-        }
-    }
-
-    //! Override - world transform state
     public override void Transformation()
     {
         base.Transformation();

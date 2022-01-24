@@ -8,6 +8,10 @@ TagManager:
   - Bunny
   - Puppy
   - Distraction
+  - Floor
+  - Water
+  - FloorSpikes
+  - Pit
   layers:
   - Default
   - TransparentFX

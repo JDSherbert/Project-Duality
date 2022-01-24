@@ -1,16 +1,19 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-
 using Sherbert.AI;
 using Sherbert.GameplayStatics;
+using Sherbert.Framework;
 
 public class MJB_BunnyScript : JDH_AIBaseFramework
 {
-    public float cooldown = 3.0f;
-    public float maxListenDistance = 10.0f;
+    [SerializeField] private float cooldown = 3.0f;
+    [SerializeField] private float spawnDelay = 3.0f;
+    [SerializeField] private float maxListenDistance = 10.0f;
 
     private Vector3 patrolLocation;
     private Vector3 lastSoundLocation;
+    private List<GameObject> dodgeTheseTraps;
 
     void Start()
     {
@@ -32,61 +35,12 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         {
             PuppyInteraction(collision.gameObject);
         }
-    }
-
-    private void Patrol()
-    {
-        baseProperties.patrolWaitTime -= Time.deltaTime;
-        if (baseProperties.patrolWaitTime <= 0)
+        else if (collision.gameObject.GetComponent<MJB_FloorTileScript>())
         {
-            baseProperties.patrolWaitTime = cooldown;
-            patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
-        }
-        if (transform.position != patrolLocation)
-        {
-            transform.Translate((patrolLocation - transform.position) * Time.deltaTime * baseProperties.patrolSpeed);
+            TrapInteraction();
         }
     }
 
-    private void ChaseSound()
-    {
-        transform.Translate((lastSoundLocation - transform.position) * Time.deltaTime * baseProperties.chaseSpeed);
-        if (transform.position == lastSoundLocation)
-        {
-            baseProperties.chasing = false;
-        }
-    }
-
-    public void SetSoundLocation(Vector3 location)
-    {
-        if (Vector3.Distance(transform.position, location) <= maxListenDistance)
-        {
-            lastSoundLocation = location;
-            baseProperties.chasing = true;
-        }
-    }
-
-    private void PlayerInteraction(GameObject player)
-    {
-        // Add heavy onto player weight here
-        Destroy(gameObject);
-    }
-
-    private void PuppyInteraction(GameObject puppy)
-    {
-        StartCoroutine(SpawnKind(puppy.transform.position));
-        Destroy(puppy);
-    }
-
-    private IEnumerator SpawnKind(Vector3 spawnPosition)
-    {
-        yield return new WaitForSeconds(3);
-        Instantiate(baseProperties.self, spawnPosition, transform.rotation);
-    }
-
-    //!------------- VIRTUAL METHODS ----------------!//
-
-    //! Override - Sets defaults
     public override void InitializeAI()
     {
         base.InitializeAI();
@@ -94,9 +48,26 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         baseProperties.patrolWaitTime = 3.0f;
         baseProperties.patrolSpeed = 0.5f;
         baseProperties.chaseSpeed = 3.0f;
+        GetTrapsToDodge();
     }
 
-    //! Override - update behaviour
+    private void GetTrapsToDodge()
+    {
+        dodgeTheseTraps = new List<GameObject>();
+        FindTraps("Water");
+        FindTraps("Pit");
+        //FindTraps("BearTrap");
+    }
+
+    private void FindTraps(string trapTag)
+    {
+        GameObject[] traps = GameObject.FindGameObjectsWithTag(trapTag);
+        foreach (GameObject trap in traps)
+        {
+            dodgeTheseTraps.Add(trap);
+        }
+    }
+
     public override void BehaviourHandler()
     {
         base.BehaviourHandler();
@@ -113,7 +84,76 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         }
     }
 
-    //! Override - world transform state
+    private void Patrol()
+    {
+        baseProperties.patrolWaitTime -= Time.deltaTime;
+        if (baseProperties.patrolWaitTime <= 0)
+        {
+            baseProperties.patrolWaitTime = cooldown;
+            patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
+        }
+        if (transform.position != patrolLocation)
+        {
+            transform.Translate((patrolLocation - transform.position) * Time.deltaTime * baseProperties.patrolSpeed);
+        }
+        DodgeTheTraps(baseProperties.patrolSpeed);
+    }
+
+    private void ChaseSound()
+    {
+        transform.Translate((lastSoundLocation - transform.position) * Time.deltaTime * baseProperties.chaseSpeed);
+        if (transform.position == lastSoundLocation)
+        {
+            baseProperties.chasing = false;
+            baseProperties.patrolWaitTime = cooldown;
+        }
+        DodgeTheTraps(baseProperties.chaseSpeed);
+    }
+
+    private void DodgeTheTraps(float dodgeSpeed)
+    {
+        foreach (GameObject trap in dodgeTheseTraps)
+        {
+            if (Vector3.Distance(trap.transform.position, transform.position) <= 2)
+            {
+                transform.Translate((transform.position - trap.transform.position) * Time.deltaTime * dodgeSpeed);
+            }
+        }
+    }
+
+    public void SetSoundLocation(Vector3 location)
+    {
+        if (Vector3.Distance(transform.position, location) <= maxListenDistance)
+        {
+            lastSoundLocation = location;
+            baseProperties.chasing = true;
+        }
+    }
+
+    private void PlayerInteraction(GameObject playerObject)
+    {
+        // Add heavy onto player weight here
+        playerObject.GetComponent<MJB_PlayerEnemyCountScript>().AddtoCount("bunny");
+        gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+    }
+
+    private void PuppyInteraction(GameObject puppy)
+    {
+        StartCoroutine(SpawnKind(puppy.transform.position));
+        puppy.GetComponent<JDH_HealthSystem>().DealDamage();
+    }
+
+    private void TrapInteraction()
+    {
+        gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+    }
+
+    private IEnumerator SpawnKind(Vector3 spawnPosition)
+    {
+        yield return new WaitForSeconds(spawnDelay);
+        Instantiate(baseProperties.self, spawnPosition, transform.rotation);
+    }
+
     public override void Transformation()
     {
         base.Transformation();

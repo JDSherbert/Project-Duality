@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using Sherbert.AI;
 using Sherbert.GameplayStatics;
+using Sherbert.Framework;
 
 public class MJB_PuppyScript : JDH_AIBaseFramework
 {
-    public float maxDistractionDistance = 20.0f;
-    public float maxDetectionDistance = 15.0f;
+    [SerializeField] private float maxDistractionDistance = 20.0f;
+    [SerializeField] private float maxDetectionDistance = 15.0f;
+    [SerializeField] private float spawnDelay = 3.0f;
 
     private Vector3 direction;
     private GameObject currentDistraction;
     private bool distracted = false;
+    private List<GameObject> dodgeTheseTraps;
 
     void Start()
     {
@@ -26,7 +28,7 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(EntityTypes.WALL) && baseProperties.chasing && !distracted)
+        if (collision.gameObject.CompareTag(EntityTypes.WALL) && !baseProperties.chasing && !distracted)
         {
             direction = new Vector3(Random.Range(-1, 2), Random.Range(-1, 2));
             direction.Normalize();
@@ -47,6 +49,55 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
         else if (collision.gameObject.CompareTag(EntityTypes.BIRD))
         {
             BirdInteraction(collision.gameObject);
+        }
+        else if (collision.gameObject.GetComponent<MJB_FloorTileScript>())
+        {
+            TrapInteraction();
+        }
+    }
+
+    public override void InitializeAI()
+    {
+        base.InitializeAI();
+        baseProperties.patrolSpeed = 1.0f;
+        baseProperties.chaseSpeed = 3.0f;
+        direction = new Vector3(1, 0, 0);
+        direction.Normalize();
+        baseProperties.target = base.AcquireTarget();
+        GetTrapsToDodge();
+    }
+
+    private void GetTrapsToDodge()
+    {
+        dodgeTheseTraps = new List<GameObject>();
+        FindTraps("FloorSpikes");
+        //FindTraps("Explosives");
+        //FindTraps("StickyGoo");
+    }
+
+    private void FindTraps(string trapTag)
+    {
+        GameObject[] traps = GameObject.FindGameObjectsWithTag(trapTag);
+        foreach (GameObject trap in traps)
+        {
+            dodgeTheseTraps.Add(trap);
+        }
+    }
+
+    public override void BehaviourHandler()
+    {
+        base.BehaviourHandler();
+        if (JDH_World.GetWorldIsEvil())
+        {
+            CheckForDistractions();
+            if (!distracted)
+            {
+                NotDistracted();
+            }
+            else
+            {
+                ChaseDistraction();
+            }
         }
     }
 
@@ -128,6 +179,7 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
     private void Patrol()
     {
         transform.Translate(direction * Time.deltaTime * baseProperties.patrolSpeed);
+        DodgeTheTraps(baseProperties.patrolSpeed);
     }
 
     private void CheckPlayerDistance()
@@ -151,6 +203,7 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
             direction.Normalize();
             transform.Translate(direction * Time.deltaTime * baseProperties.chaseSpeed);
         }
+        DodgeTheTraps(baseProperties.chaseSpeed);
     }
 
     private void ChaseDistraction()
@@ -158,58 +211,44 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
         direction = currentDistraction.transform.position - transform.position;
         direction.Normalize();
         transform.Translate(direction * Time.deltaTime * baseProperties.chaseSpeed);
+        DodgeTheTraps(baseProperties.chaseSpeed);
+    }
+
+    private void DodgeTheTraps(float dodgeSpeed)
+    {
+        foreach (GameObject trap in dodgeTheseTraps)
+        {
+            if (Vector3.Distance(trap.transform.position, transform.position) <= 2)
+            {
+                transform.Translate((transform.position - trap.transform.position) * Time.deltaTime * dodgeSpeed);
+            }
+        }
     }
 
     private void PlayerInteraction(GameObject playerObject)
     {
         // Dim lights here 
-        Destroy(gameObject);
+        playerObject.GetComponent<MJB_PlayerEnemyCountScript>().AddtoCount("puppy");
+        gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
     }
 
     private void BirdInteraction(GameObject bird)
     {
         StartCoroutine(SpawnKind(bird.transform.position));
-        Destroy(bird);
+        bird.GetComponent<JDH_HealthSystem>().DealDamage();
+    }
+
+    private void TrapInteraction()
+    {
+        gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
     }
 
     private IEnumerator SpawnKind(Vector3 spawnPosition)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(spawnDelay);
         Instantiate(baseProperties.self, spawnPosition, transform.rotation);
     }
 
-    //!------------- VIRTUAL METHODS ----------------!//
-
-    //! Override - Sets defaults
-    public override void InitializeAI()
-    {
-        base.InitializeAI();
-        baseProperties.patrolSpeed = 1.0f;
-        baseProperties.chaseSpeed = 3.0f;
-        direction = new Vector3(1, 0, 0);
-        direction.Normalize();
-        AcquireTarget();
-    }
-
-    //! Override - update behaviour
-    public override void BehaviourHandler()
-    {
-        base.BehaviourHandler();
-        if (JDH_World.GetWorldIsEvil())
-        {
-            CheckForDistractions();
-            if (!distracted)
-            {
-                NotDistracted();
-            }
-            else
-            {
-                ChaseDistraction();
-            }
-        }
-    }
-
-    //! Override - world transform state
     public override void Transformation()
     {
         base.Transformation();
