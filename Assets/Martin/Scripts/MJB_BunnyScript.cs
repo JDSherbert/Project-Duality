@@ -1,46 +1,34 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MJB_BunnyScript : MonoBehaviour
+using Sherbert.AI;
+using Sherbert.GameplayStatics;
+
+public class MJB_BunnyScript : JDH_AIBaseFramework
 {
+    public float cooldown = 3.0f;
+    public float maxListenDistance = 10.0f;
 
-    [SerializeField] private float patrolWaitTime = 3f;
-    [SerializeField] private float patrolSpeed = 0.5f;
-    [SerializeField] private float chaseSpeed = 3f;
-    [SerializeField] private GameObject bunny = null;
-
-    private bool chasing = false;
     private Vector3 patrolLocation;
     private Vector3 lastSoundLocation;
 
     void Start()
     {
-        patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
+        InitializeAI();
     }
 
     private void FixedUpdate()
     {
-        if (Sherbert.GameplayStatics.JDH_World.world == Sherbert.GameplayStatics.JDH_World.WorldState.Evil)
-        {
-            if (!chasing)
-            {
-                Patrol();
-            }
-            else
-            {
-                ChaseSound();
-            }
-        }
+        BehaviourHandler();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(EntityTypes.PLAYER))
         {
             PlayerInteraction(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("Puppy"))
+        else if (collision.gameObject.CompareTag(EntityTypes.PUPPY))
         {
             PuppyInteraction(collision.gameObject);
         }
@@ -48,33 +36,33 @@ public class MJB_BunnyScript : MonoBehaviour
 
     private void Patrol()
     {
-        patrolWaitTime -= Time.deltaTime;
-        if (patrolWaitTime <= 0)
+        baseProperties.patrolWaitTime -= Time.deltaTime;
+        if (baseProperties.patrolWaitTime <= 0)
         {
-            patrolWaitTime = 3f;
+            baseProperties.patrolWaitTime = cooldown;
             patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
         }
         if (transform.position != patrolLocation)
         {
-            transform.Translate((patrolLocation - transform.position) * Time.deltaTime * patrolSpeed);
+            transform.Translate((patrolLocation - transform.position) * Time.deltaTime * baseProperties.patrolSpeed);
         }
     }
 
     private void ChaseSound()
     {
-        transform.Translate((lastSoundLocation - transform.position) * Time.deltaTime * chaseSpeed);
+        transform.Translate((lastSoundLocation - transform.position) * Time.deltaTime * baseProperties.chaseSpeed);
         if (transform.position == lastSoundLocation)
         {
-            chasing = false;
+            baseProperties.chasing = false;
         }
     }
 
     public void SetSoundLocation(Vector3 location)
     {
-        if (Vector3.Distance(transform.position, location) <= 10)
+        if (Vector3.Distance(transform.position, location) <= maxListenDistance)
         {
             lastSoundLocation = location;
-            chasing = true;
+            baseProperties.chasing = true;
         }
     }
 
@@ -93,6 +81,41 @@ public class MJB_BunnyScript : MonoBehaviour
     private IEnumerator SpawnKind(Vector3 spawnPosition)
     {
         yield return new WaitForSeconds(3);
-        Instantiate(bunny, spawnPosition, transform.rotation);
+        Instantiate(baseProperties.self, spawnPosition, transform.rotation);
+    }
+
+    //!------------- VIRTUAL METHODS ----------------!//
+
+    //! Override - Sets defaults
+    public override void InitializeAI()
+    {
+        base.InitializeAI();
+        patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
+        baseProperties.patrolWaitTime = 3.0f;
+        baseProperties.patrolSpeed = 0.5f;
+        baseProperties.chaseSpeed = 3.0f;
+    }
+
+    //! Override - update behaviour
+    public override void BehaviourHandler()
+    {
+        base.BehaviourHandler();
+        if (JDH_World.GetWorldIsEvil())
+        {
+            if (!baseProperties.chasing)
+            {
+                Patrol();
+            }
+            else
+            {
+                ChaseSound();
+            }
+        }
+    }
+
+    //! Override - world transform state
+    public override void Transformation()
+    {
+        base.Transformation();
     }
 }

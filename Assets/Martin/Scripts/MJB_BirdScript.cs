@@ -1,46 +1,31 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MJB_BirdScript : MonoBehaviour
+using Sherbert.AI;
+using Sherbert.GameplayStatics;
+
+public class MJB_BirdScript : JDH_AIBaseFramework
 {
-
-    [SerializeField] private float chaseSpeed = 5f;
-    [SerializeField] private GameObject bird = null;
-
-    private bool chasing = false;
-    private GameObject player;
+    public float cooldown = 3.0f;
+    public float spawnDelay = 3.0f;
 
     void Start()
     {
-        if (GameObject.FindGameObjectWithTag("Player"))
-        {
-            player = GameObject.FindGameObjectWithTag("Player");
-        }
-        else
-        {
-            player = null;
-        }
+        InitializeAI();
     }
 
     private void FixedUpdate()
     {
-        if (Sherbert.GameplayStatics.JDH_World.world == Sherbert.GameplayStatics.JDH_World.WorldState.Evil)
-        {
-            if (chasing)
-            {
-                ChasePlayer();
-            }
-        }
+        BehaviourHandler();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(EntityTypes.PLAYER))
         {
             PlayerInteraction(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("Bunny"))
+        else if (collision.gameObject.CompareTag(EntityTypes.BUNNY))
         {
             BunnyInteraction(collision.gameObject);
         }
@@ -48,9 +33,9 @@ public class MJB_BirdScript : MonoBehaviour
 
     private void ChasePlayer()
     {
-        if (player != null)
+        if (baseProperties.target != null)
         {
-            transform.Translate((player.transform.position - transform.position) * Time.deltaTime * chaseSpeed);
+            transform.Translate((baseProperties.target.transform.position - transform.position) * Time.deltaTime * baseProperties.chaseSpeed);
         }
     }
 
@@ -67,22 +52,53 @@ public class MJB_BirdScript : MonoBehaviour
 
     public void TriggerBird()
     {
-        if (!chasing)
+        if (!baseProperties.chasing)
         {
             StartCoroutine(ChaseCooldown());
         }
-        chasing = true;
+        baseProperties.chasing = true;
     }
 
     private IEnumerator ChaseCooldown()
     {
-        yield return new WaitForSeconds(3);
-        chasing = false;
+        yield return new WaitForSeconds(cooldown);
+        baseProperties.chasing = false;
     }
 
     private IEnumerator SpawnKind(Vector3 spawnPosition)
     {
-        yield return new WaitForSeconds(3);
-        Instantiate(bird, spawnPosition, transform.rotation);
+        yield return new WaitForSeconds(spawnDelay);
+        Instantiate(baseProperties.self, spawnPosition, transform.rotation);
+    }
+
+    //!------------- VIRTUAL METHODS ----------------!//
+
+    //! Override - Sets defaults
+    public override void InitializeAI()
+    {
+        base.InitializeAI();
+        baseProperties.target = base.AcquireTarget();
+        baseProperties.chaseSpeed = 5.0f;
+
+    }
+
+    //! Override - update behaviour
+    public override void BehaviourHandler()
+    {
+        base.BehaviourHandler();
+        if (JDH_World.GetWorldIsEvil())
+        {
+            if (baseProperties.chasing)
+            {
+                base.events.OnDetectPlayer.Invoke(base.baseProperties.target);
+                ChasePlayer();
+            }
+        }
+    }
+
+    //! Override - world transform state
+    public override void Transformation()
+    {
+        base.Transformation();
     }
 }

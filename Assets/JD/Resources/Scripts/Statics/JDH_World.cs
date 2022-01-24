@@ -9,6 +9,7 @@
 namespace Sherbert.GameplayStatics
 {
     using UnityEngine;
+    using UnityEngine.Events;
 
     /// <summary>
     ///____________________________________________________________________________________________________________________________________________________
@@ -19,6 +20,9 @@ namespace Sherbert.GameplayStatics
     {
         public const float DEFAULTWORLDSPEED = 1.0f;
         public const float MAXWORLDSPEED = 10.0f;
+
+
+
         public enum WorldState
         {
             Cute, Evil
@@ -26,19 +30,38 @@ namespace Sherbert.GameplayStatics
 
         public static WorldState world = new WorldState();
 
+        public static class Events
+        {
+            public delegate JDH_World.WorldState OnWorldStateChangeDelegate(JDH_World.WorldState NewWorldState);
+            public static OnWorldStateChangeDelegate OnWorldStateChangeEvent;
+            public delegate float OnWorldSpeedChangeDelegate(float NewSpeed);
+            public static OnWorldSpeedChangeDelegate OnWorldSpeedChangeEvent;
+        }
+
         public static void SetWorld(WorldState NewState)
         {
             world = NewState;
+            Debug.Log("World Set to new state" + NewState.ToString());
+            if(Events.OnWorldStateChangeEvent != null) Events.OnWorldStateChangeEvent.Invoke(world);
         }
 
         public static WorldState GetWorld()
         {
             return world;
         }
+        public static bool GetWorldIsEvil()
+        {
+            return world == WorldState.Evil;
+        }
+        public static bool GetWorldIsCute()
+        {
+            return world == WorldState.Cute;
+        }
 
         public static void SetWorldSpeed(float Speed)
         {
             Time.timeScale = Mathf.Clamp(Speed, 0.0f, MAXWORLDSPEED);
+            Events.OnWorldSpeedChangeEvent.Invoke(Time.timeScale);
         }
         public static void ResetWorldSpeed()
         {

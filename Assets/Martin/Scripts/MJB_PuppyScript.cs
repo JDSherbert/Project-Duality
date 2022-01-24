@@ -2,52 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MJB_PuppyScript : MonoBehaviour
-{
+using Sherbert.AI;
+using Sherbert.GameplayStatics;
 
-    [SerializeField] private float patrolSpeed = 1f;
-    [SerializeField] private float chaseSpeed = 3f;
-    [SerializeField] private GameObject puppy = null;
+public class MJB_PuppyScript : JDH_AIBaseFramework
+{
+    public float maxDistractionDistance = 20.0f;
+    public float maxDetectionDistance = 15.0f;
 
     private Vector3 direction;
-    private GameObject player;
     private GameObject currentDistraction;
     private bool distracted = false;
-    private bool chasing = false;
 
     void Start()
     {
-        direction = new Vector3(1, 0, 0);
-        direction.Normalize();
-        if (GameObject.FindGameObjectWithTag("Player"))
-        {
-            player = GameObject.FindGameObjectWithTag("Player");
-        }
-        else
-        {
-            player = null;
-        }
+        InitializeAI();
     }
 
     private void FixedUpdate()
     {
-        if (Sherbert.GameplayStatics.JDH_World.world == Sherbert.GameplayStatics.JDH_World.WorldState.Evil)
-        {
-            CheckForDistractions();
-            if (!distracted)
-            {
-                NotDistracted();
-            }
-            else
-            {
-                ChaseDistraction();
-            }
-        }
+        BehaviourHandler();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall") && !chasing && !distracted)
+        if (collision.gameObject.CompareTag(EntityTypes.WALL) && baseProperties.chasing && !distracted)
         {
             direction = new Vector3(Random.Range(-1, 2), Random.Range(-1, 2));
             direction.Normalize();
@@ -56,16 +35,16 @@ public class MJB_PuppyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Distraction"))
+        if (collision.gameObject.CompareTag(EntityTypes.DISTRACTION))
         {
             distracted = false;
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag(EntityTypes.PLAYER))
         {
             PlayerInteraction(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("Bird"))
+        else if (collision.gameObject.CompareTag(EntityTypes.BIRD))
         {
             BirdInteraction(collision.gameObject);
         }
@@ -73,7 +52,7 @@ public class MJB_PuppyScript : MonoBehaviour
 
     private void CheckForDistractions()
     {
-        GameObject[] distractions = GameObject.FindGameObjectsWithTag("Distraction");
+        GameObject[] distractions = GameObject.FindGameObjectsWithTag(EntityTypes.DISTRACTION);
         if (distractions.Length != 0)
         {
             List<float> distractionDistances = new List<float>();
@@ -82,7 +61,7 @@ public class MJB_PuppyScript : MonoBehaviour
                 distractionDistances.Add(Vector3.Distance(transform.position, distractions[i].transform.position));
             }
             distractions = SortDistances(distractionDistances, distractions);
-            if (Vector3.Distance(transform.position, distractions[0].transform.position) <= 20)
+            if (Vector3.Distance(transform.position, distractions[0].transform.position) <= maxDistractionDistance)
             {
                 SetDistractedObject(distractions[0]);
             }
@@ -135,7 +114,7 @@ public class MJB_PuppyScript : MonoBehaviour
 
     private void NotDistracted()
     {
-        if (!chasing)
+        if (!baseProperties.chasing)
         {
             Patrol();
             CheckPlayerDistance();
@@ -148,17 +127,17 @@ public class MJB_PuppyScript : MonoBehaviour
 
     private void Patrol()
     {
-        transform.Translate(direction * Time.deltaTime * patrolSpeed);
+        transform.Translate(direction * Time.deltaTime * baseProperties.patrolSpeed);
     }
 
     private void CheckPlayerDistance()
     {
-        if (player != null)
+        if (baseProperties.target != null)
         {
-            if (Vector3.Distance(player.transform.position, transform.position) <= 15)
+            if (Vector3.Distance(baseProperties.target.transform.position, transform.position) <= maxDetectionDistance)
             {
-                chasing = true;
-                direction = player.transform.position - transform.position;
+                baseProperties.chasing = true;
+                direction = baseProperties.target.transform.position - transform.position;
                 direction.Normalize();
             }
         }
@@ -166,11 +145,11 @@ public class MJB_PuppyScript : MonoBehaviour
 
     private void Chase()
     {
-        if (player != null)
+        if (baseProperties.target != null)
         {
-            direction = player.transform.position - transform.position;
+            direction = baseProperties.target.transform.position - transform.position;
             direction.Normalize();
-            transform.Translate(direction * Time.deltaTime * chaseSpeed);
+            transform.Translate(direction * Time.deltaTime * baseProperties.chaseSpeed);
         }
     }
 
@@ -178,7 +157,7 @@ public class MJB_PuppyScript : MonoBehaviour
     {
         direction = currentDistraction.transform.position - transform.position;
         direction.Normalize();
-        transform.Translate(direction * Time.deltaTime * chaseSpeed);
+        transform.Translate(direction * Time.deltaTime * baseProperties.chaseSpeed);
     }
 
     private void PlayerInteraction(GameObject playerObject)
@@ -196,6 +175,43 @@ public class MJB_PuppyScript : MonoBehaviour
     private IEnumerator SpawnKind(Vector3 spawnPosition)
     {
         yield return new WaitForSeconds(3);
-        Instantiate(puppy, spawnPosition, transform.rotation);
+        Instantiate(baseProperties.self, spawnPosition, transform.rotation);
+    }
+
+    //!------------- VIRTUAL METHODS ----------------!//
+
+    //! Override - Sets defaults
+    public override void InitializeAI()
+    {
+        base.InitializeAI();
+        baseProperties.patrolSpeed = 1.0f;
+        baseProperties.chaseSpeed = 3.0f;
+        direction = new Vector3(1, 0, 0);
+        direction.Normalize();
+        AcquireTarget();
+    }
+
+    //! Override - update behaviour
+    public override void BehaviourHandler()
+    {
+        base.BehaviourHandler();
+        if (JDH_World.GetWorldIsEvil())
+        {
+            CheckForDistractions();
+            if (!distracted)
+            {
+                NotDistracted();
+            }
+            else
+            {
+                ChaseDistraction();
+            }
+        }
+    }
+
+    //! Override - world transform state
+    public override void Transformation()
+    {
+        base.Transformation();
     }
 }

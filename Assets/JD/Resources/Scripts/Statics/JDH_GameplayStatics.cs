@@ -26,6 +26,11 @@ namespace Sherbert.GameplayStatics
             return GameObject.FindGameObjectWithTag(PlayerTag);
         }
 
+        public static void KillPlayer()
+        {
+            
+        }
+
         public static GameObject GetObject(string Name)
         {
             return GameObject.Find(Name);

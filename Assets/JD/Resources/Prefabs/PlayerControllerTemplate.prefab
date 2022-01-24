@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 2558534936954622160}
   - component: {fileID: 2558534936954622163}
   - component: {fileID: 2558534936954622162}
+  - component: {fileID: 78504246792078789}
   - component: {fileID: 4377745137984522758}
   m_Layer: 0
   m_Name: PlayerControllerTemplate
@@ -595,6 +596,18 @@ MonoBehaviour:
       rigidbody2D: {fileID: 0}
       spriteRenderer: {fileID: 0}
       pixelPerfectCamera: {fileID: 0}
+--- !u!114 &78504246792078789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2558534936954622165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69746c0d0f2476c429453acd66b0fb9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4377745137984522758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1881,5 +1894,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     OnFinishPrintPayload:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTextCleared:
       m_PersistentCalls:
         m_Calls: []
