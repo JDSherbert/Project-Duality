@@ -178,8 +178,8 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
 
     private void Patrol()
     {
+        DodgeTheTraps();
         transform.Translate(direction * Time.deltaTime * baseProperties.patrolSpeed);
-        DodgeTheTraps(baseProperties.patrolSpeed);
     }
 
     private void CheckPlayerDistance()
@@ -201,26 +201,26 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
         {
             direction = baseProperties.target.transform.position - transform.position;
             direction.Normalize();
+            DodgeTheTraps();
             transform.Translate(direction * Time.deltaTime * baseProperties.chaseSpeed);
         }
-        DodgeTheTraps(baseProperties.chaseSpeed);
     }
 
     private void ChaseDistraction()
     {
         direction = currentDistraction.transform.position - transform.position;
         direction.Normalize();
+        DodgeTheTraps();
         transform.Translate(direction * Time.deltaTime * baseProperties.chaseSpeed);
-        DodgeTheTraps(baseProperties.chaseSpeed);
     }
 
-    private void DodgeTheTraps(float dodgeSpeed)
+    private void DodgeTheTraps()
     {
         foreach (GameObject trap in dodgeTheseTraps)
         {
             if (Vector3.Distance(trap.transform.position, transform.position) <= 2)
             {
-                transform.Translate((transform.position - trap.transform.position) * Time.deltaTime * dodgeSpeed);
+                direction *= -1;
             }
         }
     }
@@ -252,5 +252,22 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
     public override void Transformation()
     {
         base.Transformation();
+    }
+
+    public float GetSpeed()
+    {
+        if (baseProperties.chasing || distracted)
+        {
+            return baseProperties.chaseSpeed;
+        }
+        else
+        {
+            return baseProperties.patrolSpeed;
+        }
+    }
+
+    public Vector3 GetDirection()
+    {
+        return direction;
     }
 }

@@ -94,29 +94,36 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         }
         if (transform.position != patrolLocation)
         {
+            DodgeTheTraps();
             transform.Translate((patrolLocation - transform.position) * Time.deltaTime * baseProperties.patrolSpeed);
         }
-        DodgeTheTraps(baseProperties.patrolSpeed);
     }
 
     private void ChaseSound()
     {
+        DodgeTheTraps();
         transform.Translate((lastSoundLocation - transform.position) * Time.deltaTime * baseProperties.chaseSpeed);
         if (transform.position == lastSoundLocation)
         {
             baseProperties.chasing = false;
             baseProperties.patrolWaitTime = cooldown;
         }
-        DodgeTheTraps(baseProperties.chaseSpeed);
     }
 
-    private void DodgeTheTraps(float dodgeSpeed)
+    private void DodgeTheTraps()
     {
         foreach (GameObject trap in dodgeTheseTraps)
         {
             if (Vector3.Distance(trap.transform.position, transform.position) <= 2)
             {
-                transform.Translate((transform.position - trap.transform.position) * Time.deltaTime * dodgeSpeed);
+                if (!baseProperties.chasing)
+                {
+                    patrolLocation = transform.position;
+                }
+                else
+                {
+                    lastSoundLocation = transform.position;
+                }
             }
         }
     }
@@ -157,5 +164,31 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     public override void Transformation()
     {
         base.Transformation();
+    }
+
+    public float GetSpeed()
+    {
+        if (baseProperties.chasing)
+        {
+            return baseProperties.chaseSpeed;
+        }
+        else if (!baseProperties.chasing && transform.position != patrolLocation)
+        {
+            return baseProperties.patrolSpeed;
+        }
+        return 0;
+    }
+
+    public Vector3 GetDirection()
+    {
+        if (!baseProperties.chasing && transform.position == patrolLocation)
+        {
+            return Vector3.zero;
+        }
+        else if (!baseProperties.chasing && transform.position != patrolLocation)
+        {
+            return patrolLocation - transform.position;
+        }
+        return lastSoundLocation - transform.position;
     }
 }

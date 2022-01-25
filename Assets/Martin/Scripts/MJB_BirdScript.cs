@@ -118,4 +118,29 @@ public class MJB_BirdScript : JDH_AIBaseFramework
     {
         base.Transformation();
     }
+
+    public float GetSpeed()
+    {
+        if (baseProperties.chasing)
+        {
+            return baseProperties.chaseSpeed;
+        }
+        return 0;
+    }
+
+    public Vector3 GetDirection()
+    {
+        if (!baseProperties.chasing)
+        {
+            return Vector3.zero;
+        }
+        if (CanStillSeePlayer())
+        {
+            return baseProperties.target.transform.position - transform.position;
+        }
+        else
+        {
+            return lastPlayerPosition - transform.position;
+        }
+    }
 }
