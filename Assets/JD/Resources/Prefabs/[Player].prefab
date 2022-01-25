@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 78504246792078789}
   - component: {fileID: 4377745137984522758}
   m_Layer: 0
-  m_Name: PlayerControllerTemplate
+  m_Name: '[Player]'
   m_TagString: Player
   m_Icon: {fileID: 2800000, guid: 395f6b9556f14704790df6035be6ee3a, type: 3}
   m_NavMeshLayer: 0

@@ -54,6 +54,10 @@ namespace Sherbert.AI
         }
         public Events events = new Events();
 
+        //____________________________________________________________________________________________________________________________________________
+        // MonoBehaviour Methods
+        //____________________________________________________________________________________________________________________________________________
+
         void Awake()
         {
             events.OnWorldStateChangeDelegateAI += JDH_World.Events.OnWorldStateChangeEvent; //Subscribe to event
