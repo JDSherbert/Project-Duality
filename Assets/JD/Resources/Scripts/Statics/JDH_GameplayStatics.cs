@@ -17,6 +17,7 @@ namespace Sherbert.GameplayStatics
     public static class JDH_GameplayStatics
     {
         public const string PLAYERTAG = "Player";
+        
         public static GameObject GetPlayer()
         {
             return GameObject.FindGameObjectWithTag(PLAYERTAG);

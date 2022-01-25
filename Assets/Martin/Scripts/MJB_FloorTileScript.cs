@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sherbert.GameplayStatics;
+using Sherbert.Map.Tile;
 
-public class MJB_FloorTileScript : MonoBehaviour
+public class MJB_FloorTileScript : JDH_TileBase
 {
 
     [SerializeField] private List<Sprite> allSprites = null;
@@ -25,6 +26,12 @@ public class MJB_FloorTileScript : MonoBehaviour
         gameObject.tag = trap.name;
         BoxCollider2D newCol = gameObject.AddComponent<BoxCollider2D>();
         newCol.isTrigger = true;
+    }
+
+    public void OnTriggerEnter2D(Collider2D other) 
+    {
+        base.OnSteppedOn(other.gameObject);
+        if(isTrap) base.TrapActivation(other.gameObject);    
     }
 
     public void SetSpriteType(JDH_World.WorldState type)

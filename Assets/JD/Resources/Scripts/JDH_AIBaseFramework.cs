@@ -8,8 +8,6 @@
 
 namespace Sherbert.AI
 {
-    using System.Collections;
-    using System.Collections.Generic;
     using UnityEngine;
     using UnityEngine.Events;
 
@@ -60,6 +58,10 @@ namespace Sherbert.AI
         {
             events.OnWorldStateChangeDelegateAI += JDH_World.Events.OnWorldStateChangeEvent; //Subscribe to event
         }
+
+        //____________________________________________________________________________________________________________________________________________
+        // Class Methods
+        //____________________________________________________________________________________________________________________________________________
 
         public virtual void InitializeAI()
         {
