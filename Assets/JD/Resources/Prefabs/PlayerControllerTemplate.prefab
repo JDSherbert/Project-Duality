@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 1309974791
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -8501974817023376318, guid: 84eec7b7282f8e948a9105ee846baea3, type: 3}
+  m_Sprite: {fileID: 5029649575022642309, guid: 84eec7b7282f8e948a9105ee846baea3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -608,6 +608,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69746c0d0f2476c429453acd66b0fb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health:
+    current: 1
+    state: 0
+  events:
+    OnHeal:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDamagedBy:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDeath:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRespawn:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &4377745137984522758
 MonoBehaviour:
   m_ObjectHideFlags: 0
