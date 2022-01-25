@@ -116,14 +116,12 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         {
             if (Vector3.Distance(trap.transform.position, transform.position) <= 2)
             {
-                if (!baseProperties.chasing)
+                if (baseProperties.chasing)
                 {
-                    patrolLocation = transform.position;
+                    baseProperties.chasing = false;
                 }
-                else
-                {
-                    lastSoundLocation = transform.position;
-                }
+                baseProperties.patrolWaitTime = cooldown;
+                patrolLocation = transform.position - trap.transform.position;
             }
         }
     }
