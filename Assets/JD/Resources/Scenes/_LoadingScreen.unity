@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 637602545}
   - component: {fileID: 637602544}
   m_Layer: 5
-  m_Name: Sprite
+  m_Name: Loading Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1129,7 +1129,7 @@ Animator:
   m_GameObject: {fileID: 637602542}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 14a405cab283d7041845ca47ee25d299, type: 2}
+  m_Controller: {fileID: 9100000, guid: a2881b2e48d9fc649b1dffbe1a3fa0bd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1178,7 +1178,7 @@ SpriteRenderer:
   m_SortingLayerID: -53311223
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: -8501974817023376318, guid: 84eec7b7282f8e948a9105ee846baea3, type: 3}
+  m_Sprite: {fileID: 5029649575022642309, guid: 84eec7b7282f8e948a9105ee846baea3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -1305,8 +1305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loader:
     progress: 0
-    scenePayload:
-      m_Handle: 0
+    sceneBuildIndex: -1
   events:
     OnLoadOpStart:
       m_PersistentCalls:

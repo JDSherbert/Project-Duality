@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8490775522289455598}
   - component: {fileID: 8398887736426033339}
   m_Layer: 2
-  m_Name: Sprite
+  m_Name: '[Sprite] Player'
   m_TagString: Untagged
   m_Icon: {fileID: 2800000, guid: dcea51d6065d64246aeec467afeff684, type: 3}
   m_NavMeshLayer: 0
@@ -590,7 +590,7 @@ MonoBehaviour:
       startTime: 0
       distance: 0
       velocity: 0
-      useFlipX: 1
+      useFlipX: 0
     component:
       animator: {fileID: 0}
       rigidbody2D: {fileID: 0}
