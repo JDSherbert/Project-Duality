@@ -130,6 +130,13 @@ namespace Sherbert.Tools.Animation
             component.animator.SetTrigger(anim.currentAnimationParameter);
             events.OnAnimatorCallback.Invoke();
         }
+        public virtual void ActivateAnimatorTrigger(string Trigger)
+        {
+            try {component.animator.ResetTrigger(Trigger);}
+            catch {}
+            component.animator.SetTrigger(Trigger);
+            events.OnAnimatorCallback.Invoke();
+        }
         public virtual void ActivateAnimatorBool(bool NewBool)
         {
             component.animator.SetBool(anim.currentAnimationParameter, NewBool);
@@ -144,6 +151,15 @@ namespace Sherbert.Tools.Animation
         {
             component.animator.SetFloat(anim.currentAnimationParameter, NewFloat);
             events.OnAnimatorCallback.Invoke();
+        }
+
+        public void ChangeLayerWeight(float Weight = 0)
+        {
+            component.animator.SetLayerWeight(anim.currentAnimationLayer, Weight);
+        }
+        public void ChangeLayerWeight(float Weight, int Layer = 0)
+        {
+            component.animator.SetLayerWeight(Layer, Weight);
         }
     }
 }

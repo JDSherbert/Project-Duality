@@ -85,7 +85,6 @@ namespace Sherbert.Framework
         public void Interact(JDH_InteractionComponent Instigator)
         {
             Debug.Log(this.gameObject.name + " was interacted with by " + Instigator.gameObject.name);
-            events.OnInteractionWithInstigator.Invoke(Instigator);
             Instigator.PerformInteraction(interactable.type);
         }
 

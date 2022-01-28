@@ -24,7 +24,7 @@ namespace Sherbert.Framework
         {
             public enum State
             {
-                Idle, Moving
+                Idle, Moving, Stop
             }
 
             public State state = State.Idle;
@@ -45,8 +45,8 @@ namespace Sherbert.Framework
             public class LocomotionSettings
             {
                 public float stepSize = 0.1f;
-                public float speed = 1;
-                public float acceleration = 2;
+                public float speed = 15.0f;
+                public float acceleration = 0.01f;
                 public Vector3 nextMoveCommand;
 
                 public Vector3 start, end;
@@ -79,6 +79,7 @@ namespace Sherbert.Framework
                 public UnityEvent OnWalkRight;
                 public UnityEvent OnJump;
             }
+            public Events events = new Events();
         }
 
         public PlayerControllerSettings player = new PlayerControllerSettings();
@@ -86,7 +87,7 @@ namespace Sherbert.Framework
         //____________________________________________________________________________________________________________________________________________
         // Monobehaviour methods
         //____________________________________________________________________________________________________________________________________________
-        
+
         void Awake()
         {
             Init();
@@ -94,11 +95,11 @@ namespace Sherbert.Framework
 
         void Update()
         {
-            InputHandler();
-            PlayerMovement();
+            if(player.state != PlayerControllerSettings.State.Stop) InputHandler();
+            PlayerStateMachine();
         }
 
-        void LateUpdate() 
+        void LateUpdate()
         {
             CameraHandler();
         }
@@ -107,7 +108,7 @@ namespace Sherbert.Framework
         // Class Methods
         //____________________________________________________________________________________________________________________________________________
 
-        void InputHandler()
+        public virtual void InputHandler()
         {
             player.input.AXIS_HORIZONTAL = Input.GetAxis(player.input.HorizontalAxis);
             player.input.AXIS_VERTICAL = Input.GetAxis(player.input.VerticalAxis);
@@ -125,7 +126,7 @@ namespace Sherbert.Framework
                 player.locomotion.nextMoveCommand = Vector3.zero;
         }
 
-        void PlayerMovement()
+        void PlayerStateMachine()
         {
             switch (player.state)
             {
@@ -135,10 +136,14 @@ namespace Sherbert.Framework
                 case PlayerControllerSettings.State.Moving:
                     MoveState();
                     break;
+                case PlayerControllerSettings.State.Stop:
+                    StopActions();
+                    break;
+                
             }
         }
 
-        void IdleState()
+        public virtual void IdleState()
         {
             if (player.locomotion.nextMoveCommand != Vector3.zero)
             {
@@ -151,32 +156,39 @@ namespace Sherbert.Framework
                 player.locomotion.nextMoveCommand = Vector3.zero;
                 player.state = PlayerControllerSettings.State.Moving;
             }
-            else 
+            else
             {
                 player.state = PlayerControllerSettings.State.Idle;
                 player.locomotion.velocity = 0;
             }
         }
 
-        void MoveState()
+        public virtual void MoveState()
         {
             player.locomotion.velocity = Mathf.Clamp01(player.locomotion.velocity + Time.deltaTime * player.locomotion.acceleration);
             UpdateAnimator(player.locomotion.nextMoveCommand);
+            SmoothStopping();
 
-            //? Smooth Stopping
-            player.component.rigidbody2D.velocity = Vector2.SmoothDamp(
-                player.component.rigidbody2D.velocity, 
-                player.locomotion.nextMoveCommand * player.locomotion.speed, 
-                ref player.locomotion.currentVelocity, 
-                player.locomotion.acceleration, 
-                player.locomotion.speed);
-            
             //? Flip Sprite
-            if(player.component.spriteRenderer && player.locomotion.useFlipX) 
+            if (player.component.spriteRenderer && player.locomotion.useFlipX)
                 player.component.spriteRenderer.flipX = player.locomotion.nextMoveCommand.x >= 0 ? true : false;
         }
 
-        void UpdateAnimator(Vector3 direction)
+        public void StopActions() //! Will need to be taken out of this state
+        {
+            player.state = PlayerControllerSettings.State.Stop;
+            player.locomotion.nextMoveCommand = Vector3.zero;
+            player.locomotion.velocity = 0;
+            player.component.rigidbody2D.velocity = new Vector2(0,0);
+            UpdateAnimator(Vector3.zero);
+            SmoothStopping();
+        }
+        public void ResumeActions()
+        {
+            player.state = PlayerControllerSettings.State.Idle;
+        }
+
+        public void UpdateAnimator(Vector3 direction)
         {
             if (player.component.animator && !player.locomotion.useFlipX)
             {
@@ -188,6 +200,15 @@ namespace Sherbert.Framework
                 player.component.animator.SetInteger("WalkX", direction.x < 0 ? -1 : direction.x > 0 ? -1 : 0);
                 player.component.animator.SetInteger("WalkY", direction.y < 0 ? -1 : direction.y > 0 ? 1 : 0);
             }
+            UpdateControllerEvents(direction);
+        }
+
+        void UpdateControllerEvents(Vector3 direction)
+        {
+            if (direction.x < 0) player.events.OnWalkLeft.Invoke();
+            if (direction.x > 0) player.events.OnWalkRight.Invoke();
+            if (direction.y < 0) player.events.OnWalkDown.Invoke();
+            if (direction.y > 0) player.events.OnWalkUp.Invoke();
         }
 
         void CameraHandler()
@@ -198,18 +219,29 @@ namespace Sherbert.Framework
             }
         }
 
+        void SmoothStopping()
+        {
+            //? Smooth Stopping
+            player.component.rigidbody2D.velocity = Vector2.SmoothDamp(
+                player.component.rigidbody2D.velocity,
+                player.locomotion.nextMoveCommand * player.locomotion.speed,
+                ref player.locomotion.currentVelocity,
+                player.locomotion.acceleration,
+                player.locomotion.speed);
+        }
+
         void Init()
         {
-            if(!player.component.rigidbody2D && GetComponent<Rigidbody2D>()) player.component.rigidbody2D = GetComponent<Rigidbody2D>();
+            if (!player.component.rigidbody2D && GetComponent<Rigidbody2D>()) player.component.rigidbody2D = GetComponent<Rigidbody2D>();
             else if (!player.component.rigidbody2D && !GetComponent<Rigidbody2D>()) player.component.rigidbody2D = new Rigidbody2D();
 
-            if(!player.component.spriteRenderer && GetComponentInChildren<SpriteRenderer>()) player.component.spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            else if(!player.component.spriteRenderer && !GetComponentInChildren<SpriteRenderer>()) Debug.LogWarning("No Sprite Renderer found as a child of this gameobject.");
-            
-            if(!player.component.animator && GetComponentInChildren<Animator>()) player.component.animator = GetComponentInChildren<Animator>();
-            else if(!player.component.animator && !GetComponentInChildren<Animator>()) Debug.LogWarning("No animator found as a child of this gameobject.");
+            if (!player.component.spriteRenderer && GetComponentInChildren<SpriteRenderer>()) player.component.spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            else if (!player.component.spriteRenderer && !GetComponentInChildren<SpriteRenderer>()) Debug.LogWarning("No Sprite Renderer found as a child of this gameobject.");
 
-            if(!player.component.pixelPerfectCamera) player.component.pixelPerfectCamera = GameObject.FindObjectOfType<PixelPerfectCamera>();
+            if (!player.component.animator && GetComponentInChildren<Animator>()) player.component.animator = GetComponentInChildren<Animator>();
+            else if (!player.component.animator && !GetComponentInChildren<Animator>()) Debug.LogWarning("No animator found as a child of this gameobject.");
+
+            if (!player.component.pixelPerfectCamera) player.component.pixelPerfectCamera = GameObject.FindObjectOfType<PixelPerfectCamera>();
             else if (!player.component.pixelPerfectCamera && !GameObject.FindObjectOfType<PixelPerfectCamera>()) Debug.LogWarning("No Pixel Perfect Camera found.");
         }
     }
