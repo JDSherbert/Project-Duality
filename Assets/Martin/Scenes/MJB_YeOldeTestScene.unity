@@ -218,6 +218,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -318,6 +328,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -499,6 +519,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -599,6 +629,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -699,6 +739,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -799,6 +849,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -899,6 +959,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -999,6 +1069,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -1099,6 +1179,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -1357,6 +1447,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -1536,6 +1636,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -1636,6 +1746,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -1736,6 +1856,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -1919,6 +2049,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -2019,6 +2159,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -2261,6 +2411,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -2409,6 +2569,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -2509,6 +2679,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -2688,6 +2868,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -2788,6 +2978,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -2888,6 +3088,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -2988,6 +3198,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -3088,6 +3308,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -3225,6 +3455,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -3325,6 +3565,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -3425,6 +3675,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -3770,6 +4030,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -3949,6 +4219,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -4049,6 +4329,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -4149,6 +4439,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -4249,6 +4549,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -4349,6 +4659,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -4449,6 +4769,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -4549,6 +4879,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -4649,6 +4989,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -4894,6 +5244,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -5073,6 +5433,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -5173,6 +5543,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -5510,6 +5890,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -5610,6 +6000,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -5789,6 +6189,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -5889,6 +6299,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -5989,6 +6409,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -6089,6 +6519,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -6189,6 +6629,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -6289,6 +6739,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -6389,6 +6849,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -6489,6 +6959,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -6747,6 +7227,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -7005,6 +7495,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -7105,6 +7605,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -7205,6 +7715,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -7384,6 +7904,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -7484,6 +8014,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -7584,6 +8124,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -7684,6 +8234,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -7784,6 +8344,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -7884,6 +8454,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -7984,6 +8564,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -8084,6 +8674,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -8263,6 +8863,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -8363,6 +8973,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -8463,6 +9083,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -8563,6 +9193,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -8663,6 +9303,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -8763,6 +9413,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -8863,6 +9523,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -8963,6 +9633,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -9063,6 +9743,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -9163,6 +9853,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -9263,6 +9963,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -9363,6 +10073,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -9463,6 +10183,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -9563,6 +10293,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -9663,6 +10403,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -9763,6 +10513,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -9863,6 +10623,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -9963,6 +10733,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -10063,6 +10843,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -10163,6 +10953,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -10234,7 +11034,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589758073}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -10363,6 +11163,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -10500,6 +11310,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -10600,6 +11420,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -10779,6 +11609,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -10879,6 +11719,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -10979,6 +11829,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -11079,6 +11939,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -11179,6 +12049,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -11279,6 +12159,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -11379,6 +12269,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -11637,6 +12537,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -11951,6 +12861,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -12126,6 +13046,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -12305,6 +13235,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -12405,6 +13345,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -12505,6 +13455,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -12605,6 +13565,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -12784,6 +13754,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -12963,6 +13943,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -13142,6 +14132,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -13242,6 +14242,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -13342,6 +14352,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -13442,6 +14462,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -13542,6 +14572,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -13721,6 +14761,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -13821,6 +14871,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -14000,6 +15060,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -14100,6 +15170,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -14200,6 +15280,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -14300,6 +15390,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -14400,6 +15500,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}
@@ -14561,6 +15671,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05df3756ed133904084ce911903c1337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events:
+    OnTileChange:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTileSteppedOn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTrapActivated:
+      m_PersistentCalls:
+        m_Calls: []
   allSprites:
   - {fileID: 21300000, guid: ef2be339f8da0a14cb1316d57f5ab47b, type: 3}
   - {fileID: 21300000, guid: 6e14f5d00620f0142886fc21908894bb, type: 3}

@@ -13,7 +13,7 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
 
     private Vector3 direction;
     private GameObject currentDistraction;
-    private bool distracted = false;
+    private bool distracted = false, checkedTraps = false;
     private List<GameObject> dodgeTheseTraps;
 
     void Start()
@@ -42,17 +42,25 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
             distracted = false;
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag(EntityTypes.PLAYER))
+        else if (collision.gameObject.CompareTag(EntityTypes.PLAYER) || collision.gameObject.CompareTag(EntityTypes.BIRD))
         {
-            PlayerInteraction(collision.gameObject);
+            RunInteraction(collision.gameObject.tag, collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag(EntityTypes.BIRD))
+        else if (collision.gameObject.GetComponent<MJB_TrapTileBehaviour>())
         {
-            BirdInteraction(collision.gameObject);
+            TrapInteraction(collision.gameObject);
         }
-        else if (collision.gameObject.GetComponent<MJB_FloorTileScript>())
+    }
+
+    private void RunInteraction(string interactionType, GameObject interactor)
+    {
+        if (interactionType == EntityTypes.PLAYER)
         {
-            TrapInteraction();
+            PlayerInteraction(interactor);
+        }
+        else if (interactionType == EntityTypes.BIRD)
+        {
+            BirdInteraction(interactor);
         }
     }
 
@@ -64,15 +72,15 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
         direction = new Vector3(1, 0, 0);
         direction.Normalize();
         baseProperties.target = base.AcquireTarget();
-        GetTrapsToDodge();
+        dodgeTheseTraps = new List<GameObject>();
     }
 
     private void GetTrapsToDodge()
     {
-        dodgeTheseTraps = new List<GameObject>();
         FindTraps("FloorSpikes");
         //FindTraps("Explosives");
         //FindTraps("StickyGoo");
+        checkedTraps = true;
     }
 
     private void FindTraps(string trapTag)
@@ -87,6 +95,7 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
     public override void BehaviourHandler()
     {
         base.BehaviourHandler();
+        TrapCheck();
         if (JDH_World.GetWorldIsEvil())
         {
             CheckForDistractions();
@@ -98,6 +107,14 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
             {
                 ChaseDistraction();
             }
+        }
+    }
+
+    private void TrapCheck()
+    {
+        if (!checkedTraps)
+        {
+            GetTrapsToDodge();
         }
     }
 
@@ -128,7 +145,6 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
                 if (distances[i] > distances[i + 1])
                 {
                     distances = SwapDistances(distances, i);
-
                     distractionObjects = SwapObjects(distractionObjects, i);
                 }
             }
@@ -238,8 +254,9 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
         bird.GetComponent<JDH_HealthSystem>().DealDamage();
     }
 
-    private void TrapInteraction()
+    private void TrapInteraction(GameObject trap)
     {
+        trap.GetComponent<MJB_TrapTileBehaviour>().UncoverTrap();
         gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
     }
 

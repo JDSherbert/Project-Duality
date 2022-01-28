@@ -9,14 +9,11 @@ public class MJB_TrapTileBehaviour : MonoBehaviour
     private SpriteRenderer sRender;
     private bool uncovered = false;
 
-    private void Awake()
-    {
-        sRender = GetComponent<SpriteRenderer>();
-    }
-
     void Start()
     {
+        sRender = GetComponent<SpriteRenderer>();
         sRender.enabled = false;
+        transform.SetParent(GameObject.Find("Traps").transform, true);
     }
 
     void Update()

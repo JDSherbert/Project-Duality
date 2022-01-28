@@ -44,7 +44,7 @@ public class MJB_ChaseScenePlayerScript : MonoBehaviour
     {
         if (collision.gameObject.name == "Bird(Clone)" || collision.gameObject.name == "Puppy(Clone)" || collision.gameObject.name == "Bunny(Clone)")
         {
-            //transform.Translate(Vector3.left * Time.deltaTime * playerMoveSpeed * damageDistanceMultiplier);
+            transform.Translate(Vector3.left * Time.deltaTime * playerMoveSpeed * damageDistanceMultiplier);
             Destroy(collision.gameObject);
         }
     }

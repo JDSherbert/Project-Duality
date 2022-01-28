@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8350442326160254430}
   - component: {fileID: 8350442326160254425}
+  - component: {fileID: 8997455677037536854}
+  - component: {fileID: 760822494637181831}
   - component: {fileID: 8350442326160254424}
   - component: {fileID: 8350442326160254427}
   m_Layer: 0
@@ -84,6 +86,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8997455677037536854
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8350442326160254426}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.28}
+  m_EdgeRadius: 0
+--- !u!50 &760822494637181831
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8350442326160254426}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &8350442326160254424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,10 +145,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f00e5a0339f634ab7a085552952c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolWaitTime: 3
-  patrolSpeed: 0.5
-  chaseSpeed: 3
-  bunny: {fileID: 8350442326160254426}
+  baseProperties:
+    self: {fileID: 0}
+    target: {fileID: 0}
+    patrolWaitTime: 0
+    patrolSpeed: 0
+    chaseSpeed: 0
+    chasing: 0
+  events:
+    OnSpawn:
+      m_PersistentCalls:
+        m_Calls: []
+    OnTransformed:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDetectPlayer:
+      m_PersistentCalls:
+        m_Calls: []
+    OnInteraction:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDestroyed:
+      m_PersistentCalls:
+        m_Calls: []
+  cooldown: 3
+  spawnDelay: 3
+  maxListenDistance: 10
 --- !u!114 &8350442326160254427
 MonoBehaviour:
   m_ObjectHideFlags: 0

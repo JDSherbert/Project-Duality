@@ -14,6 +14,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     private Vector3 patrolLocation;
     private Vector3 lastSoundLocation;
     private List<GameObject> dodgeTheseTraps;
+    private bool checkedTraps = false;
 
     void Start()
     {
@@ -35,9 +36,9 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         {
             PuppyInteraction(collision.gameObject);
         }
-        else if (collision.gameObject.GetComponent<MJB_FloorTileScript>())
+        else if (collision.gameObject.GetComponent<MJB_TrapTileBehaviour>())
         {
-            TrapInteraction();
+            TrapInteraction(collision.gameObject);
         }
     }
 
@@ -48,15 +49,15 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         baseProperties.patrolWaitTime = 3.0f;
         baseProperties.patrolSpeed = 0.5f;
         baseProperties.chaseSpeed = 3.0f;
-        GetTrapsToDodge();
+        dodgeTheseTraps = new List<GameObject>();
     }
 
     private void GetTrapsToDodge()
     {
-        dodgeTheseTraps = new List<GameObject>();
         FindTraps("Water");
         FindTraps("Pit");
         //FindTraps("BearTrap");
+        checkedTraps = true;
     }
 
     private void FindTraps(string trapTag)
@@ -71,6 +72,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     public override void BehaviourHandler()
     {
         base.BehaviourHandler();
+        TrapCheck();
         if (JDH_World.GetWorldIsEvil())
         {
             if (!baseProperties.chasing)
@@ -81,6 +83,14 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
             {
                 ChaseSound();
             }
+        }
+    }
+
+    private void TrapCheck()
+    {
+        if (!checkedTraps)
+        {
+            GetTrapsToDodge();
         }
     }
 
@@ -148,8 +158,9 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         puppy.GetComponent<JDH_HealthSystem>().DealDamage();
     }
 
-    private void TrapInteraction()
+    private void TrapInteraction(GameObject trap)
     {
+        trap.GetComponent<MJB_TrapTileBehaviour>().UncoverTrap();
         gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
     }
 

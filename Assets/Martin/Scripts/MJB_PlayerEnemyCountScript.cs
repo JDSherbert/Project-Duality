@@ -21,19 +21,28 @@ public class MJB_PlayerEnemyCountScript : MonoBehaviour
         if (type == "bunny")
         {
             bunnyCount++;
-            if (bunnyCount >= maxBunnies)
-            {
-                gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
-            }
+            CheckBunnies();
         }
         else
         {
             puppyCount++;
-            if (puppyCount >= maxPuppies)
-            {
-                gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
-            }
+            CheckPuppies();
         }
     }
 
+    private void CheckBunnies()
+    {
+        if (bunnyCount >= maxBunnies)
+        {
+            gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        }
+    }
+
+    private void CheckPuppies()
+    {
+        if (puppyCount >= maxPuppies)
+        {
+            gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        }
+    }
 }
