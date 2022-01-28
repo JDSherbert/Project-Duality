@@ -10,12 +10,13 @@ public class MJB_ChaseSceneScript : MonoBehaviour
     [SerializeField] private float spawnCooldown = 3, distanceToOffScreen = 5;
 
     private GameObject player;
-    private float cooldown;
+    private float maxCooldown;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        cooldown = spawnCooldown;
+        maxCooldown = spawnCooldown + 1;
+        transform.position = new Vector3(transform.position.x, GameObject.FindGameObjectWithTag("MainCamera").transform.position.y, transform.position.z);
     }
 
     void Update()
@@ -23,14 +24,14 @@ public class MJB_ChaseSceneScript : MonoBehaviour
         spawnCooldown -= Time.deltaTime;
         if (spawnCooldown <= 0)
         {
-            spawnCooldown = cooldown;
+            spawnCooldown = Random.Range(2, (int)maxCooldown + 1);
             SpawnEnemy(enemies[Random.Range(0, enemies.Count)]);
         }
     }
 
     private void SpawnEnemy(GameObject enemy)
     {
-        Instantiate(enemy, new Vector3(player.transform.position.x, 0, 0) + (Vector3.right * distanceToOffScreen), Quaternion.identity);
+        Instantiate(enemy, new Vector3(player.transform.position.x, 0, 0) + (Vector3.right * (distanceToOffScreen + Random.Range(0, 6))), Quaternion.identity);
     }
 
     public void PlayerGotCaught()

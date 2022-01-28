@@ -5,16 +5,17 @@ using UnityEngine;
 public class MJB_ChaseSceneBossScript : MonoBehaviour
 {
 
-    private float bossMoveSpeed;
+    private float bossMoveSpeed, moveSpeedMultiplier;
 
     void Start()
     {
         bossMoveSpeed = GameObject.FindGameObjectWithTag("Player").GetComponent<MJB_ChaseScenePlayerScript>().GetChaseSpeed();
+        moveSpeedMultiplier = GameObject.FindGameObjectWithTag("Player").GetComponent<MJB_ChaseScenePlayerScript>().GetChaseSpeedMultiplier();
     }
 
     void Update()
     {
-        
+        bossMoveSpeed *= moveSpeedMultiplier;
     }
 
     private void FixedUpdate()

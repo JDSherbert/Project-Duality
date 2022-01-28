@@ -12,6 +12,7 @@ TagManager:
   - Water
   - FloorSpikes
   - Pit
+  - Wall
   layers:
   - Default
   - TransparentFX

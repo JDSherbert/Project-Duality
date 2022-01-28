@@ -5,11 +5,16 @@ using UnityEngine;
 public class MJB_ChaseSceneCameraScript : MonoBehaviour
 {
 
-    private float moveSpeed;
+    private float moveSpeed, moveSpeedMultiplier;
 
     void Start()
     {
         moveSpeed = GameObject.FindGameObjectWithTag("Player").GetComponent<MJB_ChaseScenePlayerScript>().GetChaseSpeed();
+        moveSpeedMultiplier = GameObject.FindGameObjectWithTag("Player").GetComponent<MJB_ChaseScenePlayerScript>().GetChaseSpeedMultiplier();
+    }
+    private void Update()
+    {
+        moveSpeed *= moveSpeedMultiplier;
     }
 
     private void FixedUpdate()
