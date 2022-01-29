@@ -43,6 +43,8 @@ namespace Sherbert.Tools.Text
 
             [Tooltip("Used for tracking the current state of the fade.")]
             [HideInInspector] public bool bUseFade;
+            [Tooltip("Stack multiple texts on top of one another")]
+            public bool bStack = false;
         }
         public TextSettings txt = new TextSettings();
 
@@ -94,7 +96,9 @@ namespace Sherbert.Tools.Text
             }
             else
             {
-                component.tmp_TextBox.text += "\n" + Message;
+                if(txt.bStack) component.tmp_TextBox.text += "\n" + Message;
+                else component.tmp_TextBox.text = Message;
+
                 txt.textDuration = Duration;
                 txt.fadeDuration = FadeTransition;
                 txt.durationTimer = 0f;
@@ -115,7 +119,9 @@ namespace Sherbert.Tools.Text
             }
             else
             {
-                component.txt_TextBox.text += "\n" + Message;
+                if(txt.bStack) component.txt_TextBox.text += "\n" + Message;
+                else component.txt_TextBox.text = Message;
+                
                 txt.textDuration = Duration;
                 txt.fadeDuration = FadeTransition;
                 txt.durationTimer = 0f;

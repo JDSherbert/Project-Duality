@@ -23,6 +23,7 @@ namespace Sherbert.Framework
         {
             public const int MAXHEALTH = 1;
             public int current = 1;
+            public bool spawnAwake = true;
 
             public enum State
             {
@@ -41,6 +42,15 @@ namespace Sherbert.Framework
             public UnityEvent OnRespawn;
         }
         public Events events = new Events();
+
+         //____________________________________________________________________________________________________________________________________________
+        // MonoBehaviour Methods
+        //____________________________________________________________________________________________________________________________________________
+
+        void Awake()
+        {
+            if(health.spawnAwake) events.OnRespawn.Invoke();
+        }
 
         //____________________________________________________________________________________________________________________________________________
         // Class Methods
