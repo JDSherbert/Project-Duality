@@ -32,6 +32,7 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
         {
             direction = new Vector3(Random.Range(-1, 2), Random.Range(-1, 2));
             direction.Normalize();
+            GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 3f);
         }
     }
 
@@ -78,8 +79,8 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
     private void GetTrapsToDodge()
     {
         FindTraps("FloorSpikes");
-        //FindTraps("Explosives");
-        //FindTraps("StickyGoo");
+        FindTraps("Explosives");
+        FindTraps("StickyGoo");
         checkedTraps = true;
     }
 
@@ -258,7 +259,14 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
     private void TrapInteraction(GameObject trap)
     {
         trap.GetComponent<MJB_TrapTileBehaviour>().UncoverTrap();
-        gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        if (trap.CompareTag("Alarm"))
+        {
+            GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 100f);
+        }
+        else
+        {
+            gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        }
     }
 
     private IEnumerator SpawnKind(Vector3 spawnPosition)

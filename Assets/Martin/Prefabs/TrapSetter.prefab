@@ -94,7 +94,11 @@ MonoBehaviour:
   - {fileID: 5467106956805335592, guid: 62cb09eaa86ecd34aafd8022e538c822, type: 3}
   - {fileID: -5752827643529663753, guid: 62cb09eaa86ecd34aafd8022e538c822, type: 3}
   trapTypes:
-  - {fileID: 5153873166859336777, guid: a9eded80168e1d34780ad3418ed8e4e9, type: 3}
-  - {fileID: 7178815066012411980, guid: 436f42c0d565cb240b86024f7d1dd534, type: 3}
-  - {fileID: 8158675694624444004, guid: b24dda05dfb9557479764214ccfcbe4e, type: 3}
+  - {fileID: 3609483452812001535, guid: 49fdfc5b44659a0438e9119dd89737b4, type: 3}
+  - {fileID: 5415564985487640385, guid: f736883cd987e5b4eb3242ce80522e55, type: 3}
+  - {fileID: 3201299365542962387, guid: ad528c2fe4fb22f46af2f3bf914e3024, type: 3}
+  - {fileID: 2168984074531265737, guid: 1fc0f4a5de09c0e44afa2f6c5be67e14, type: 3}
+  - {fileID: 3051583761842091172, guid: 6346b59b8dd3bcf47aa101af4664db10, type: 3}
+  - {fileID: 1631536180949276914, guid: bc58d48c0baf6f54390300c3c4be6084, type: 3}
+  - {fileID: 3005925375420002975, guid: 4d6687b9757e98744bb2e92f64494393, type: 3}
   trapNumberDivisor: 20

@@ -13,6 +13,7 @@ public class MJB_TrapTileBehaviour : MonoBehaviour
     {
         sRender = GetComponent<SpriteRenderer>();
         sRender.enabled = false;
+        transform.Translate(new Vector3(0.25f, 0.25f, 0), Space.World);
         transform.SetParent(GameObject.Find("Traps").transform, true);
     }
 

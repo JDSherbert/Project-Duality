@@ -9,7 +9,6 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
 {
     [SerializeField] private float cooldown = 3.0f;
     [SerializeField] private float spawnDelay = 3.0f;
-    [SerializeField] private float maxListenDistance = 10.0f;
 
     private Vector3 patrolLocation;
     private Vector3 lastSoundLocation;
@@ -45,6 +44,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     public override void InitializeAI()
     {
         base.InitializeAI();
+        GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().AddBunny(gameObject);
         lastSoundLocation = Vector3.zero;
         patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
         baseProperties.patrolWaitTime = 3.0f;
@@ -57,7 +57,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     {
         FindTraps("Water");
         FindTraps("Pit");
-        //FindTraps("BearTrap");
+        FindTraps("BearTrap");
         checkedTraps = true;
     }
 
@@ -138,9 +138,10 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         }
     }
 
-    public void SetSoundLocation(Vector3 location)
+    public void SetSoundLocation(Vector3 location, float soundValue)
     {
-        if (Vector3.Distance(transform.position, location) <= maxListenDistance)
+        float doesBunnyChase = Random.Range(0f, 100f);
+        if (doesBunnyChase <= soundValue)
         {
             lastSoundLocation = location;
             baseProperties.chasing = true;
@@ -163,7 +164,15 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     private void TrapInteraction(GameObject trap)
     {
         trap.GetComponent<MJB_TrapTileBehaviour>().UncoverTrap();
-        gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        if (trap.CompareTag("Alarm"))
+        {
+            GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 100f);
+        }
+        else
+        {
+            GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().RemoveBunny(gameObject);
+            gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        }
     }
 
     private IEnumerator SpawnKind(Vector3 spawnPosition)

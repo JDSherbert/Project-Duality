@@ -91,6 +91,7 @@ public class MJB_BirdScript : JDH_AIBaseFramework
     private void BunnyInteraction(GameObject bunny)
     {
         StartCoroutine(SpawnKind(bunny.transform.position));
+        GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().RemoveBunny(bunny);
         bunny.GetComponent<JDH_HealthSystem>().DealDamage();
     }
 

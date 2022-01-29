@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 493621793910478257}
   m_Layer: 0
   m_Name: '[NPC] Pupper'
-  m_TagString: Bunny
+  m_TagString: Puppy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
