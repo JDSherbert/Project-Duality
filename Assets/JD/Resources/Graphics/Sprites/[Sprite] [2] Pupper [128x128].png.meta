@@ -74,6 +74,48 @@ TextureImporter:
   - first:
       213: 3440676205927722448
     second: '[Sprite] [2] Pupper [128x128]_23'
+  - first:
+      213: 6784020026757730426
+    second: '[Sprite] [2] Pupper [128x128]_24'
+  - first:
+      213: -8560244688464607548
+    second: '[Sprite] [2] Pupper [128x128]_25'
+  - first:
+      213: -1160837205779947664
+    second: '[Sprite] [2] Pupper [128x128]_26'
+  - first:
+      213: 1483374681920429923
+    second: '[Sprite] [2] Pupper [128x128]_27'
+  - first:
+      213: 4016284147286656390
+    second: '[Sprite] [2] Pupper [128x128]_28'
+  - first:
+      213: 9154527133097880763
+    second: '[Sprite] [2] Pupper [128x128]_29'
+  - first:
+      213: 5646863387471250900
+    second: '[Sprite] [2] Pupper [128x128]_30'
+  - first:
+      213: 7534977378733741377
+    second: '[Sprite] [2] Pupper [128x128]_31'
+  - first:
+      213: -4127399815047818722
+    second: '[Sprite] [2] Pupper [128x128]_32'
+  - first:
+      213: 7442785965547155922
+    second: '[Sprite] [2] Pupper [128x128]_33'
+  - first:
+      213: -7197507533920420
+    second: '[Sprite] [2] Pupper [128x128]_34'
+  - first:
+      213: -1101479044447706366
+    second: '[Sprite] [2] Pupper [128x128]_35'
+  - first:
+      213: -1476512718475837527
+    second: '[Sprite] [2] Pupper [128x128]_36'
+  - first:
+      213: 7734913829759130107
+    second: '[Sprite] [2] Pupper [128x128]_37'
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -215,7 +257,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -236,7 +278,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 256
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -257,7 +299,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 256
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -278,7 +320,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 256
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -299,7 +341,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 256
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -320,7 +362,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 640
-        y: 256
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -341,7 +383,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 256
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -362,7 +404,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 896
-        y: 256
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -383,7 +425,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -404,7 +446,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -425,7 +467,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -446,7 +488,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -467,7 +509,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -488,7 +530,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 640
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -509,7 +551,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -530,7 +572,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 896
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -551,7 +593,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -572,7 +614,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -593,7 +635,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -614,7 +656,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -635,7 +677,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -656,7 +698,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 640
-        y: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -677,7 +719,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -698,7 +740,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 896
-        y: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -710,6 +752,300 @@ TextureImporter:
       bones: []
       spriteID: 0dde571a7ccbfbf20800000000000000
       internalID: 3440676205927722448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_24'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70d704654ea52e50800000000000000
+      internalID: 6784020026757730426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_25'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c684a95fc6e33980800000000000000
+      internalID: -8560244688464607548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_26'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fdd6336b0e3efe0800000000000000
+      internalID: -1160837205779947664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_27'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fdca8f961069410800000000000000
+      internalID: 1483374681920429923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_28'
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685cd0c1725bcb730800000000000000
+      internalID: 4016284147286656390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_29'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc69febce96b0f70800000000000000
+      internalID: 9154527133097880763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_30'
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d502612550bd5e40800000000000000
+      internalID: 5646863387471250900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_31'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1455702010e919860800000000000000
+      internalID: 7534977378733741377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_32'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12df027cb788b6c0800000000000000
+      internalID: -4127399815047818722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_33'
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d173bfe6661a4760800000000000000
+      internalID: 7442785965547155922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_34'
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c572c20b7ed66eff0800000000000000
+      internalID: -7197507533920420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_35'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203682c15a2c6b0f0800000000000000
+      internalID: -1101479044447706366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_36'
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afb6e4618f528be0800000000000000
+      internalID: -1476512718475837527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Sprite] [2] Pupper [128x128]_37'
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf99c07952fe75b60800000000000000
+      internalID: 7734913829759130107
       vertices: []
       indices: 
       edges: []

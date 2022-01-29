@@ -43,6 +43,14 @@ namespace Sherbert.AI
         public BaseProperties baseProperties = new BaseProperties();
 
         [System.Serializable]
+        public class Components
+        {
+            public Animator animator;
+            public SpriteRenderer spriteRenderer;
+        }
+        public Components component = new Components();
+
+        [System.Serializable]
         public class Events 
         {
             public JDH_World.Events.OnWorldStateChangeDelegate OnWorldStateChangeDelegateAI;
@@ -60,7 +68,7 @@ namespace Sherbert.AI
 
         void Awake()
         {
-            events.OnWorldStateChangeDelegateAI += JDH_World.Events.OnWorldStateChangeEvent; //Subscribe to event
+            InitializeAI();
         }
 
         //____________________________________________________________________________________________________________________________________________
@@ -69,13 +77,30 @@ namespace Sherbert.AI
 
         public virtual void InitializeAI()
         {
+            events.OnWorldStateChangeDelegateAI += JDH_World.Events.OnWorldStateChangeEvent; //Subscribe to event
             baseProperties.self = this.gameObject;
+
+            if (!component.spriteRenderer && GetComponentInChildren<SpriteRenderer>()) component.spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            else if (!component.spriteRenderer && !GetComponentInChildren<SpriteRenderer>()) Debug.LogWarning("No Sprite Renderer found as a child of this gameobject.");
+
+            if (!component.animator && GetComponentInChildren<Animator>()) component.animator = GetComponentInChildren<Animator>();
+            else if (!component.animator && !GetComponentInChildren<Animator>()) Debug.LogWarning("No animator found as a child of this gameobject.");
+
             events.OnSpawn.Invoke();
         }
 
         public virtual void BehaviourHandler()
         {
+            
+        }
 
+        public void UpdateAnimator(Vector3 direction)
+        {
+            if (component.animator)
+            {
+                component.animator.SetInteger("WalkX", direction.x < 0 ? -1 : direction.x > 0 ? 1 : 0);
+                component.animator.SetInteger("WalkY", direction.y < 0 ? -1 : direction.y > 0 ? 1 : 0);
+            }
         }
 
         public virtual void Transformation()

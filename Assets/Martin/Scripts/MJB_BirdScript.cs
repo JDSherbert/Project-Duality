@@ -44,6 +44,7 @@ public class MJB_BirdScript : JDH_AIBaseFramework
     public override void BehaviourHandler()
     {
         base.BehaviourHandler();
+        base.UpdateAnimator(GetDirection());
         if (JDH_World.GetWorldIsEvil())
         {
             if (baseProperties.chasing)

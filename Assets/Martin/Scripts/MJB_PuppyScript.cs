@@ -95,6 +95,7 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
     public override void BehaviourHandler()
     {
         base.BehaviourHandler();
+        base.UpdateAnimator(GetDirection());
         TrapCheck();
         if (JDH_World.GetWorldIsEvil())
         {

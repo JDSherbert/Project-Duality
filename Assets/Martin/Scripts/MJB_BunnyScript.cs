@@ -45,6 +45,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     public override void InitializeAI()
     {
         base.InitializeAI();
+        lastSoundLocation = Vector3.zero;
         patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
         baseProperties.patrolWaitTime = 3.0f;
         baseProperties.patrolSpeed = 0.5f;
@@ -72,6 +73,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     public override void BehaviourHandler()
     {
         base.BehaviourHandler();
+        base.UpdateAnimator(GetDirection());
         TrapCheck();
         if (JDH_World.GetWorldIsEvil())
         {

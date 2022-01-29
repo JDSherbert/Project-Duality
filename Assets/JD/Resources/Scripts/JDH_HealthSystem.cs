@@ -23,7 +23,6 @@ namespace Sherbert.Framework
         {
             public const int MAXHEALTH = 1;
             public int current = 1;
-            public bool spawnAwake = true;
 
             public enum State
             {
@@ -38,18 +37,18 @@ namespace Sherbert.Framework
         {
             public UnityEvent OnHeal;
             public UnityEvent<string> OnDamagedBy;
-            public UnityEvent OnDeath;
+            public UnityEvent<GameObject> OnDeath;
             public UnityEvent OnRespawn;
         }
         public Events events = new Events();
 
-         //____________________________________________________________________________________________________________________________________________
+        //____________________________________________________________________________________________________________________________________________
         // MonoBehaviour Methods
         //____________________________________________________________________________________________________________________________________________
 
         void Awake()
         {
-            if(health.spawnAwake) events.OnRespawn.Invoke();
+            Init();
         }
 
         //____________________________________________________________________________________________________________________________________________
@@ -79,8 +78,14 @@ namespace Sherbert.Framework
             if(health.current <= 0)
             {
                 health.state = HealthSettings.State.Dead;
-                events.OnDeath.Invoke();
+                events.OnDeath.Invoke(this.gameObject);
             } 
+        }
+
+        void Init()
+        {
+            health.current = HealthSettings.MAXHEALTH;
+            health.state = HealthSettings.State.Alive;
         }
     }
 }

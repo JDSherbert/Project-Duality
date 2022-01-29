@@ -60,6 +60,7 @@ namespace Sherbert.Tools
         /// <returns> [void] </returns>
         public void DelayerActivate(bool Activate)
         {
+            if(delayer.active == Activate) DelayPurge();
             delayer.active = Activate;
             events.OnDelayTimerStart.Invoke(Activate);
         }
