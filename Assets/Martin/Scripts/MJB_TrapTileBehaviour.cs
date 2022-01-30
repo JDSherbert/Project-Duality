@@ -37,7 +37,7 @@ public class MJB_TrapTileBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && JDH_World.GetWorldIsEvil())
         {
             UncoverTrap();
             collision.gameObject.GetComponent<JDH_HealthSystem>().DealDamage();

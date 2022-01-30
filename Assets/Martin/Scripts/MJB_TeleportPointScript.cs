@@ -11,7 +11,7 @@ public class MJB_TeleportPointScript : MonoBehaviour
 
     private void Start()
     {
-        teleportManager = transform.parent.gameObject;
+        teleportManager = GameObject.Find("TeleportationManager");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
