@@ -17,4 +17,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Shared/Scenes/[Level 2] NONAME.unity
     guid: bf35e247e06359c4b96aad48f1455328
+  - enabled: 1
+    path: Assets/Shared/Scenes/[Level 3] NONAME.unity
+    guid: 14124054b042d2a4393770035c4a0cf4
+  - enabled: 1
+    path: Assets/Shared/Scenes/[Level 4] NONAME.unity
+    guid: 3d9ce82c745b9304f93f7cd872008198
+  - enabled: 1
+    path: Assets/Shared/Scenes/[Level 5] NONAME.unity
+    guid: 5b61cdfce729b0146bc4d8da5b8f4d4a
+  - enabled: 1
+    path: Assets/Shared/Scenes/[Level 6] CHASESCENE.unity
+    guid: 174c9f4bf608d7e4bb4f4eaad16d9e7c
+  - enabled: 1
+    path: Assets/Shared/Scenes/[Level 7] FINALLEVEL.unity
+    guid: d6fefd9385c422e45ade19323cf80cec
+  - enabled: 1
+    path: Assets/Shared/Scenes/[Level 8] ENDOFGAME.unity
+    guid: 7c4bd6ff342adad4e8d17ce9a970b7dc
   m_configObjects: {}
