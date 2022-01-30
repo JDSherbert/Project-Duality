@@ -53,12 +53,16 @@ namespace Sherbert.GameplayStatics
 
         public static List<JDH_Item> GetAllItems()
         {
+            if(GetPlayer().GetComponentInChildren<JDH_InventorySystem>())
             return GetPlayer().GetComponentInChildren<JDH_InventorySystem>().GetAllItems();
+            else return null;
         }
 
         public static List<JDH_Rune> GetAllRunes()
         {
+            if(GetPlayer().GetComponentInChildren<JDH_RuneSystem>())
             return GetPlayer().GetComponentInChildren<JDH_RuneSystem>().GetAllRunes();
+            else return null;
         }
 
         public static bool GetHasHumphrey()
