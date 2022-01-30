@@ -136,6 +136,42 @@ PrefabInstance:
       propertyPath: require.item
       value: 
       objectReference: {fileID: 11400000, guid: bcabede501b8d3d4e9704b5a8d577645, type: 2}
+    - target: {fileID: 108395646575975336, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
+      propertyPath: interactable.bDestroyAfterUse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108395646575975336, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
+      propertyPath: events.OnRequiresItem.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108395646575975336, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
+      propertyPath: events.OnRequiresItem.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108395646575975336, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
+      propertyPath: events.OnRequiresItem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4653248652127036789}
+    - target: {fileID: 108395646575975336, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
+      propertyPath: events.OnRequiresItem.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108395646575975336, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
+      propertyPath: events.OnRequiresItem.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FadeInMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 108395646575975336, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
+      propertyPath: events.OnRequiresItem.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sherbert.Tools.Text.JDH_TextFader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 108395646575975336, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
+      propertyPath: events.OnInteractionWithInstigator.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: c22ae77fc0a617843aa39f611e6b560c, type: 3}
+    - target: {fileID: 108395646575975336, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
+      propertyPath: events.OnRequiresItem.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 108395646575975338, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
       propertyPath: m_Icon
       value: 
@@ -194,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108395646575975342, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
       propertyPath: m_Radius
-      value: 0.875
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108395646912510104, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
       propertyPath: m_text
@@ -279,3 +315,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 108395646575975340, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
   m_PrefabInstance: {fileID: 3910218977273732167}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4653248652127036789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8561425971599423794, guid: 541eabf65dd46ea47be9b925a6713189, type: 3}
+  m_PrefabInstance: {fileID: 3910218977273732167}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de622ff00c9723408de2ad405980a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

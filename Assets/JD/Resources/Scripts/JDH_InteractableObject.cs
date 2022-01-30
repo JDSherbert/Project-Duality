@@ -104,6 +104,7 @@ namespace Sherbert.Framework
                 }
                 else if(Instigator.interaction.inventory.EquippedItems[Instigator.interaction.inventory.currentSelection].ID == require.item.ID)
                 {
+                    Instigator.interaction.inventory.ConsumeItem(Instigator.interaction.inventory.currentSelection);
                     Instigator.PerformInteraction(interactable.type);
                     StartCoroutine(FinishInteraction());
                 }

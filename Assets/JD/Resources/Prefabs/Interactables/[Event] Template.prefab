@@ -5010,7 +5010,31 @@ MonoBehaviour:
   events:
     OnInteractionWithInstigator:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 108395647724483168}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 5609097412196328267}
+          m_TargetAssemblyTypeName: Sherbert.Tools.JDH_Detacher, Assembly-CSharp
+          m_MethodName: DetachParent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnRequiresItem:
       m_PersistentCalls:
         m_Calls: []
@@ -5593,6 +5617,8 @@ GameObject:
   m_Component:
   - component: {fileID: 108395647724483169}
   - component: {fileID: 108395647724483168}
+  - component: {fileID: 5609097412196328267}
+  - component: {fileID: 1879715764214876878}
   m_Layer: 0
   m_Name: '[Audio] Interaction'
   m_TagString: Untagged
@@ -5626,7 +5652,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5713183256236404786, guid: dfd076a1de0c0b14f9232d11b5b326d1, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5710,6 +5736,57 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5609097412196328267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108395647724483170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4af3da29dff2b4b9e3bff79d83f793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  events:
+    OnDetach:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1879715764214876878}
+          m_TargetAssemblyTypeName: Sherbert.Tools.JDH_Destroyer, Assembly-CSharp
+          m_MethodName: ActivateDestroyer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1879715764214876878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108395647724483170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e6d14858fada54bb67b429398aa33b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyer:
+    type: 0
+    timer: 3
+  events:
+    OnActivated:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDestroyObject:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &108395647849733685
 GameObject:
   m_ObjectHideFlags: 0

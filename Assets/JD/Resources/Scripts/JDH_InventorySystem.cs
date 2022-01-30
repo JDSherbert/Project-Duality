@@ -96,7 +96,7 @@ namespace Sherbert.Inventory
 
         public void UseItem()
         {
-            if (EquippedItems[currentSelection] != null)
+            if (!JDH_GameplayStatics.IsTrueNull(EquippedItems[currentSelection]))
             {
                 if (EquippedItems[currentSelection].currentAmount > 0)
                 {
@@ -111,13 +111,30 @@ namespace Sherbert.Inventory
             Debug.Log("No Item.");
         }
 
+        public void ConsumeItem(int Index)
+        {
+            Index = Mathf.Clamp(Index, 0, EquippedItems.Length);
+            if (!JDH_GameplayStatics.IsTrueNull(EquippedItems[Index]))
+            {
+                if (EquippedItems[Index].currentAmount > 0)
+                {
+                    events.OnItemUsed.Invoke(EquippedItems[Index]);
+                    Debug.Log(EquippedItems[Index].itemName + "consumed.");
+                    if (EquippedItems[Index].type == JDH_Item.ItemType.Consumable) EquippedItems[Index].currentAmount--;
+                    if (EquippedItems[Index].currentAmount == 0) EquippedItems[Index] = null;
+                    RefreshIcons();
+                    return;
+                }
+            }
+        }
+
         public void DropItem()
         {
             if (EquippedItems[currentSelection] != null)
             {
                 if (EquippedItems[currentSelection].currentAmount > 0)
                 {
-                    if(EquippedItems[currentSelection].itemObject) Instantiate(EquippedItems[currentSelection].itemObject);
+                    if(EquippedItems[currentSelection].itemObject) Instantiate(EquippedItems[currentSelection].itemObject, transform);
                     events.OnItemDropped.Invoke(EquippedItems[currentSelection]);
                     EquippedItems[currentSelection].currentAmount--;
                     if (EquippedItems[currentSelection].currentAmount == 0) EquippedItems[currentSelection] = null;
