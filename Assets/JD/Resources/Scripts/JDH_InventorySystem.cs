@@ -31,6 +31,7 @@ namespace Sherbert.Inventory
         {
             public const int SIZE = 3;
             public const string NOITEM = "Nothing";
+            public const string HUMPHREY = "ITEM0000";
 
             [System.Serializable]
             public class InputSettings
@@ -134,8 +135,14 @@ namespace Sherbert.Inventory
             {
                 if (EquippedItems[currentSelection].currentAmount > 0)
                 {
-                    if(EquippedItems[currentSelection].itemObject) Instantiate(EquippedItems[currentSelection].itemObject, transform);
+                    if(EquippedItems[currentSelection].itemObject)
+                    {
+                        if(EquippedItems[currentSelection].ID == InventorySettings.HUMPHREY) Debug.Log("You destroyed Humphrey!");
+                        else Instantiate(EquippedItems[currentSelection].itemObject, transform);
+                        
+                    }
                     events.OnItemDropped.Invoke(EquippedItems[currentSelection]);
+                    AlertEnemies();
                     EquippedItems[currentSelection].currentAmount--;
                     if (EquippedItems[currentSelection].currentAmount == 0) EquippedItems[currentSelection] = null;
                     RefreshIcons();
@@ -246,6 +253,19 @@ namespace Sherbert.Inventory
                     }
                 }
             }
+        }
+    
+        public void AlertEnemies()
+        {
+            if(EquippedItems[currentSelection].weight == JDH_Item.ItemWeight.Heavy)
+            {
+                GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 10f);
+            }
+            else if (EquippedItems[currentSelection].weight == JDH_Item.ItemWeight.Light)
+            {
+                GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 5f);
+            }
+            else return;
         }
     }
 }
