@@ -119,7 +119,7 @@ namespace Sherbert.Inventory
                 if (EquippedItems[Index].currentAmount > 0)
                 {
                     events.OnItemUsed.Invoke(EquippedItems[Index]);
-                    Debug.Log(EquippedItems[Index].itemName + "consumed.");
+                    Debug.Log(EquippedItems[Index].itemName + " consumed.");
                     if (EquippedItems[Index].type == JDH_Item.ItemType.Consumable) EquippedItems[Index].currentAmount--;
                     if (EquippedItems[Index].currentAmount == 0) EquippedItems[Index] = null;
                     RefreshIcons();

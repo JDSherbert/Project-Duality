@@ -10344,7 +10344,7 @@ GameObject:
   - component: {fileID: 3338702098313175226}
   m_Layer: 5
   m_Name: InventorySystem
-  m_TagString: Untagged
+  m_TagString: UI Element
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10580,6 +10580,7 @@ GameObject:
   - component: {fileID: 2558534936954622162}
   - component: {fileID: 4377745137984522758}
   - component: {fileID: 7356288880721935699}
+  - component: {fileID: 843437611671294519}
   m_Layer: 0
   m_Name: '[Player]'
   m_TagString: Player
@@ -10890,6 +10891,22 @@ MonoBehaviour:
     OnRespawn:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &843437611671294519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2558534936954622165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc75fa6ac796e064cbfa70a75f6f8a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIElements:
+  - {fileID: 2558534936801676959}
+  - {fileID: 6992440398378648188}
+  - {fileID: 7133584439266735819}
 --- !u!1 &2558534937139627720
 GameObject:
   m_ObjectHideFlags: 0

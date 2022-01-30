@@ -17,6 +17,7 @@ TagManager:
   - StickyGoo
   - BearTrap
   - Alarm
+  - UI Element
   layers:
   - Default
   - TransparentFX

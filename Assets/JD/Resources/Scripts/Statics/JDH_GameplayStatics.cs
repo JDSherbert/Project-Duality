@@ -13,10 +13,13 @@ namespace Sherbert.GameplayStatics
 
     using Sherbert.Lexicon;
     using Sherbert.Inventory;
+    using Sherbert.Framework;
+    using Sherbert.Tools.UI;
 
     public static class JDH_GameplayStatics
     {
         public const string PLAYERTAG = "Player";
+        public const string UITAG = "UI Element";
         
         public static GameObject GetPlayer()
         {
@@ -29,7 +32,13 @@ namespace Sherbert.GameplayStatics
 
         public static void KillPlayer()
         {
-            
+            GetPlayer().GetComponent<JDH_HealthSystem>().DealDamage();
+        }
+
+        public static void ToggleUI(bool Active)
+        {
+            if(Active) GetPlayer().GetComponent<JDH_UIContainer>().EnableUI();
+            else if(!Active) GetPlayer().GetComponent<JDH_UIContainer>().DisableUI();
         }
 
         public static GameObject GetObject(string Name)
