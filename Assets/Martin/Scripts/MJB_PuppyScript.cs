@@ -251,6 +251,7 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
     {
         StartCoroutine(SpawnKind(bird.transform.position));
         bird.GetComponent<JDH_HealthSystem>().DealDamage();
+        GameObject.Find("BirdTrigger").GetComponent<MJB_BirdTrigger>().RemoveBird(bird);
         Destroy(bird);
     }
 
@@ -260,6 +261,7 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
         if (trap.CompareTag("Alarm"))
         {
             GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 100f);
+            GameObject.Find("BirdTrigger").GetComponent<MJB_BirdTrigger>().TriggerAllBirds();
             Destroy(trap);
         }
         else

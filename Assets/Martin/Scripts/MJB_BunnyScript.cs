@@ -57,7 +57,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     public override void InitializeAI()
     {
         base.InitializeAI();
-        //GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().AddBunny(gameObject);
+        GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().AddBunny(gameObject);
         lastSoundLocation = Vector3.zero;
         patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
         baseProperties.patrolWaitTime = 3.0f;
@@ -178,6 +178,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         // Add heavy onto player weight here
         playerObject.GetComponent<JDH_HealthSystem>().DealDamage();
         gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().RemoveBunny(gameObject);
         Destroy(gameObject);
     }
 
@@ -194,6 +195,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         if (trap.CompareTag("Alarm"))
         {
             GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 100f);
+            GameObject.Find("BirdTrigger").GetComponent<MJB_BirdTrigger>().TriggerAllBirds();
             Destroy(trap);
         }
         else

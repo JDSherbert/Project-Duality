@@ -43,6 +43,7 @@ public class MJB_BirdScript : JDH_AIBaseFramework
         baseProperties.target = base.AcquireTarget();
         baseProperties.chaseSpeed = 5.0f;
         lastPlayerPosition = baseProperties.target.transform.position;
+        GameObject.Find("BirdTrigger").GetComponent<MJB_BirdTrigger>().AddBird(gameObject);
     }
 
     public override void BehaviourHandler()
@@ -90,6 +91,7 @@ public class MJB_BirdScript : JDH_AIBaseFramework
     private void PlayerInteraction(GameObject playerObject)
     {
         playerObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        GameObject.Find("BirdTrigger").GetComponent<MJB_BirdTrigger>().RemoveBird(gameObject);
         Destroy(gameObject);
     }
 
