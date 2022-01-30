@@ -86,8 +86,20 @@ namespace Sherbert.Tools.Text
         {
             fader.fade = FaderSettings.Fade.IN;
         }
+        public void FadeInMode(string CustomPayload)
+        {
+            if(component.txt_TextBox) component.txt_TextBox.text = CustomPayload;
+            if(component.tmp_TextBox) component.tmp_TextBox.text = CustomPayload;
+            fader.fade = FaderSettings.Fade.IN;
+        }
         public void FadeOutMode()
         {
+            fader.fade = FaderSettings.Fade.OUT;
+        }
+        public void FadeOutMode(string CustomPayload)
+        {
+            if(component.txt_TextBox) component.txt_TextBox.text = CustomPayload;
+            if(component.tmp_TextBox) component.tmp_TextBox.text = CustomPayload;
             fader.fade = FaderSettings.Fade.OUT;
         }
         public void FadeStop()

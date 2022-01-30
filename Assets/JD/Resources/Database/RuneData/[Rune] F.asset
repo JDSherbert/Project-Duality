@@ -15,4 +15,4 @@ MonoBehaviour:
   sprite: {fileID: 4812734534291227040, guid: fe14e7906e86b894b80af59b223c368b, type: 3}
   letter: 70
   description: 
-  runeObject: {fileID: 0}
+  runeObject: {fileID: 4970920354006218399, guid: 8cc86f0fd77aeea4b8dacd53077e5276, type: 3}

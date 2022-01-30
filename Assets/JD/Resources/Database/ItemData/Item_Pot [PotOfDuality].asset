@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: POT0001
   type: 1
-  sprite: {fileID: 0}
+  sprite: {fileID: -1695043185015296638, guid: 0f8ca214e61703e4cbbc01fa0ad75465, type: 3}
   itemObject: {fileID: 0}
   itemName: Pot Of Duality
   description: ???

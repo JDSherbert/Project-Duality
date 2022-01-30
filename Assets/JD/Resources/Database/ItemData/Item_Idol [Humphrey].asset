@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: ITEM0000
   type: 1
-  sprite: {fileID: 21300000, guid: a926a7668af737a409314a5e03946492, type: 3}
-  itemObject: {fileID: 0}
-  itemName: Humphrey Idol
-  description: A strange stone object, flashing different colours in the shape of
+  sprite: {fileID: -5019707044558727115, guid: 0f8ca214e61703e4cbbc01fa0ad75465, type: 3}
+  itemObject: {fileID: 852105373965303111, guid: c860a8d3ef370b64294fc2770c5e0c5b, type: 3}
+  itemName: Idol
+  description: A strange stone object, glimmering a shade of pink in the shape of
     a small dinosaur.
   currentAmount: 0
   maximumCapacity: 1

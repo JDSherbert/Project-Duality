@@ -47,7 +47,10 @@ namespace Sherbert.GameplayStatics
             return GetPlayer().GetComponentInChildren<JDH_RuneSystem>().GetAllRunes();
         }
 
-
+        public static bool IsTrueNull(this UnityEngine.Object obj)
+        {
+            return (object)obj == null;
+        }
     }
 
 }

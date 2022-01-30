@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5949301570658539410
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6432093627079392089, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_text
+      value: Strange Idol
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627382153024, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5019707044558727115, guid: 0f8ca214e61703e4cbbc01fa0ad75465, type: 3}
+    - target: {fileID: 6432093627382153024, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627382153024, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627382153024, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055440, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432093627457055444, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: interactable.itemPickup
+      value: 
+      objectReference: {fileID: 11400000, guid: ae678edc43dd5224bb6ae04687342944, type: 2}
+    - target: {fileID: 6432093627457055445, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6432093627457055445, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}
+      propertyPath: m_Name
+      value: '[Item] Idol'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df26eec62bf91f942971cba9b8bea6fd, type: 3}

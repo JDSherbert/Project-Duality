@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4de5fccc8eabb64fbe2e3cc7dfe7c61, type: 3}
+  m_Name: Item_Orb [Purple]
+  m_EditorClassIdentifier: 
+  ID: ORB0002
+  type: 0
+  sprite: {fileID: 1926397971664263374, guid: 0f8ca214e61703e4cbbc01fa0ad75465, type: 3}
+  itemObject: {fileID: 852105373965303111, guid: e161fff7dd544fa40936bdfa733c356f, type: 3}
+  itemName: Purple Orb
+  description: An orb containing energy.
+  currentAmount: 0
+  maximumCapacity: 1
+  weight: 1

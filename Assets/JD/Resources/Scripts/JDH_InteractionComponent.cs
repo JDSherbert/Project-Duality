@@ -27,6 +27,8 @@ namespace Sherbert.Framework
         {
             public JDH_InteractableObject target;
 
+            public JDH_InventorySystem inventory;
+
             [System.Serializable]
             public class InputSettings
             {
@@ -52,6 +54,10 @@ namespace Sherbert.Framework
         // Monobehaviour methods
         //____________________________________________________________________________________________________________________________________________
 
+        void Awake()
+        {
+            Init();
+        }
         void Update()
         {
             InputHandler();
@@ -91,6 +97,7 @@ namespace Sherbert.Framework
                 case (JDH_InteractableObject.InteractableSettings.Type.Pickup):
                     if (interaction.target.interactable.itemPickup) GetComponentInChildren<JDH_InventorySystem>().AddItem(interaction.target.interactable.itemPickup);
                     if (interaction.target.interactable.runePickup) GetComponentInChildren<JDH_RuneSystem>().UnlockRune(interaction.target.interactable.runePickup);
+                    interaction.target.events.OnInteractionWithInstigator.Invoke(this);
                     break;
 
                 case (JDH_InteractableObject.InteractableSettings.Type.Event):
@@ -98,6 +105,12 @@ namespace Sherbert.Framework
                     break;
             }
             interaction.target.FinishInteraction();
+        }
+
+        void Init()
+        {
+            if (!interaction.inventory && GetComponentInChildren<JDH_InventorySystem>()) interaction.inventory = GetComponentInChildren<JDH_InventorySystem>();
+            else if (!interaction.inventory && !GetComponentInChildren<JDH_InventorySystem>()) Debug.LogWarning("No inventory found as a child of this gameobject.");
         }
     }
 }

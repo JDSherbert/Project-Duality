@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4de5fccc8eabb64fbe2e3cc7dfe7c61, type: 3}
+  m_Name: Item_Key [Blue]
+  m_EditorClassIdentifier: 
+  ID: KEY0002
+  type: 0
+  sprite: {fileID: 982138121023258713, guid: 0f8ca214e61703e4cbbc01fa0ad75465, type: 3}
+  itemObject: {fileID: 852105373965303111, guid: 863057120457d1947a26b07be1c7280c, type: 3}
+  itemName: Blue Key
+  description: A key used for unlocking doors.
+  currentAmount: 0
+  maximumCapacity: 1
+  weight: 0

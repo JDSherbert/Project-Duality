@@ -44,7 +44,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     public override void InitializeAI()
     {
         base.InitializeAI();
-        GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().AddBunny(gameObject);
+        //GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().AddBunny(gameObject);
         lastSoundLocation = Vector3.zero;
         patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
         baseProperties.patrolWaitTime = 3.0f;
