@@ -68,6 +68,14 @@ namespace Sherbert.Framework
         {
             Target(Instigator);
         }
+        void OnTriggerExit(Collider Instigator)
+        {
+            UnTarget(Instigator);
+        }
+        void OnTriggerExit2D(Collider2D Instigator)
+        {
+            UnTarget(Instigator);
+        }
 
         //____________________________________________________________________________________________________________________________________________
         // Class Methods
@@ -89,6 +97,22 @@ namespace Sherbert.Framework
                 JDH_InteractionComponent temp = Instigator.gameObject.GetComponent<JDH_InteractionComponent>();
                 temp.SetInteractionObject(this);
                 temp.events.OnTargetObjectAcquired.Invoke(this);
+            }
+        }
+        void UnTarget(Collider Instigator)
+        {
+            if (Instigator.gameObject.GetComponent<JDH_InteractionComponent>())
+            {
+                JDH_InteractionComponent temp = Instigator.gameObject.GetComponent<JDH_InteractionComponent>();
+                temp.ClearInteractionObject();
+            }
+        }
+        void UnTarget(Collider2D Instigator)
+        {
+            if (Instigator.gameObject.GetComponent<JDH_InteractionComponent>())
+            {
+                JDH_InteractionComponent temp = Instigator.gameObject.GetComponent<JDH_InteractionComponent>();
+                temp.ClearInteractionObject();
             }
         }
 

@@ -18,7 +18,7 @@ MonoBehaviour:
   itemObject: {fileID: 852105373965303111, guid: c860a8d3ef370b64294fc2770c5e0c5b, type: 3}
   itemName: Idol
   description: A strange stone object, glimmering a shade of pink in the shape of
-    a small dinosaur.
+    a small dinosaur. Fragile, so don't drop it!
   currentAmount: 0
   maximumCapacity: 1
   weight: 2
