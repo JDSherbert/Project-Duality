@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sherbert.GameplayStatics;
+using Sherbert.Framework;
 
 public class MJB_TrapTileBehaviour : MonoBehaviour
 {
@@ -32,5 +33,14 @@ public class MJB_TrapTileBehaviour : MonoBehaviour
     public void UncoverTrap()
     {
         uncovered = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            UncoverTrap();
+            collision.gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        }
     }
 }
