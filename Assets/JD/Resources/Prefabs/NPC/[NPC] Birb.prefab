@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 7110640959162619470}
   - component: {fileID: 7110640959162619471}
   - component: {fileID: 7110640959162619440}
+  - component: {fileID: 4983479613394052349}
   m_Layer: 0
   m_Name: '[NPC] Birb'
   m_TagString: Bird
@@ -392,7 +393,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &7110640959162619471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -459,6 +460,34 @@ MonoBehaviour:
         m_Calls: []
   cooldown: 3
   spawnDelay: 3
+--- !u!114 &4983479613394052349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7110640959162619468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69746c0d0f2476c429453acd66b0fb9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health:
+    current: 1
+    state: 0
+  events:
+    OnHeal:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDamagedBy:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDeath:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRespawn:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &7110640959269485374
 GameObject:
   m_ObjectHideFlags: 0

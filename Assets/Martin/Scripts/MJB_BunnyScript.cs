@@ -25,17 +25,30 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         BehaviourHandler();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (JDH_World.GetWorldIsEvil())
+        {
+            if (collision.gameObject.CompareTag(EntityTypes.PLAYER))
+            {
+                PlayerInteraction(collision.gameObject);
+            }
+            else if (collision.gameObject.CompareTag(EntityTypes.PUPPY))
+            {
+                PuppyInteraction(collision.gameObject);
+            }
+            else if (collision.gameObject.CompareTag(EntityTypes.WALL))
+            {
+                transform.Translate(GetDirection() * -1 * Time.deltaTime * baseProperties.chaseSpeed);
+                lastSoundLocation = transform.position;
+                patrolLocation = transform.position;
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(EntityTypes.PLAYER))
-        {
-            PlayerInteraction(collision.gameObject);
-        }
-        else if (collision.gameObject.CompareTag(EntityTypes.PUPPY))
-        {
-            PuppyInteraction(collision.gameObject);
-        }
-        else if (collision.gameObject.GetComponent<MJB_TrapTileBehaviour>())
+        if (collision.gameObject.GetComponent<MJB_TrapTileBehaviour>() && JDH_World.GetWorldIsEvil())
         {
             TrapInteraction(collision.gameObject);
         }
@@ -49,7 +62,7 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
         baseProperties.patrolWaitTime = 3.0f;
         baseProperties.patrolSpeed = 0.5f;
-        baseProperties.chaseSpeed = 3.0f;
+        baseProperties.chaseSpeed = 1.5f;
         dodgeTheseTraps = new List<GameObject>();
     }
 
@@ -102,12 +115,24 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         if (baseProperties.patrolWaitTime <= 0)
         {
             baseProperties.patrolWaitTime = cooldown;
-            patrolLocation = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-1, 2));
+            patrolLocation = new Vector3(transform.position.x + Random.Range(-1f, 1f), transform.position.y + Random.Range(-1f, 1f), 0);
+            CheckPatrol();
         }
         if (transform.position != patrolLocation)
         {
             DodgeTheTraps();
             transform.Translate((patrolLocation - transform.position) * Time.deltaTime * baseProperties.patrolSpeed);
+        }
+    }
+
+    private void CheckPatrol()
+    {
+        Vector3 direction = patrolLocation - transform.position;
+        direction.Normalize();
+        RaycastHit2D wallHit = Physics2D.Raycast(transform.position + direction, direction, Vector3.Distance(patrolLocation, transform.position));
+        if (wallHit.collider)
+        {
+            patrolLocation = transform.position;
         }
     }
 
@@ -151,14 +176,16 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
     private void PlayerInteraction(GameObject playerObject)
     {
         // Add heavy onto player weight here
-        playerObject.GetComponent<MJB_PlayerEnemyCountScript>().AddtoCount("bunny");
+        playerObject.GetComponent<JDH_HealthSystem>().DealDamage();
         gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        Destroy(gameObject);
     }
 
     private void PuppyInteraction(GameObject puppy)
     {
         StartCoroutine(SpawnKind(puppy.transform.position));
         puppy.GetComponent<JDH_HealthSystem>().DealDamage();
+        Destroy(puppy);
     }
 
     private void TrapInteraction(GameObject trap)
@@ -167,11 +194,13 @@ public class MJB_BunnyScript : JDH_AIBaseFramework
         if (trap.CompareTag("Alarm"))
         {
             GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 100f);
+            Destroy(trap);
         }
         else
         {
             GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().RemoveBunny(gameObject);
             gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+            Destroy(gameObject);
         }
     }
 

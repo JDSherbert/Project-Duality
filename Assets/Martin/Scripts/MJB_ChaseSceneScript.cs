@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Sherbert.Application;
 
 public class MJB_ChaseSceneScript : MonoBehaviour
 {
@@ -44,7 +45,8 @@ public class MJB_ChaseSceneScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("You win");
-            //SceneManager.LoadScene(whatever scene happens next, LoadSceneMode.Single);
+            int index = SceneManager.GetActiveScene().buildIndex + 1;
+            JDH_ApplicationManager.LoadSceneAsync(index);
         }
     }
 }

@@ -7,8 +7,8 @@ using Sherbert.Framework;
 
 public class MJB_PuppyScript : JDH_AIBaseFramework
 {
-    [SerializeField] private float maxDistractionDistance = 20.0f;
-    [SerializeField] private float maxDetectionDistance = 15.0f;
+    [SerializeField] private float maxDistractionDistance = 10.0f;
+    [SerializeField] private float maxDetectionDistance = 3f;
     [SerializeField] private float spawnDelay = 3.0f;
 
     private Vector3 direction;
@@ -28,48 +28,43 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(EntityTypes.WALL) && !baseProperties.chasing && !distracted)
+        if (JDH_World.GetWorldIsEvil())
         {
-            direction = new Vector3(Random.Range(-1, 2), Random.Range(-1, 2));
-            direction.Normalize();
-            GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 3f);
+            if (collision.gameObject.CompareTag(EntityTypes.WALL))
+            {
+                direction *= -1;
+                GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 3f);
+                baseProperties.chasing = false;
+            }
+            else if (collision.gameObject.CompareTag(EntityTypes.PLAYER))
+            {
+                PlayerInteraction(collision.gameObject);
+            }
+            else if (collision.gameObject.CompareTag(EntityTypes.DISTRACTION))
+            {
+                distracted = false;
+                Destroy(collision.gameObject);
+            }
+            else if (collision.gameObject.CompareTag(EntityTypes.BIRD))
+            {
+                BirdInteraction(collision.gameObject);
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(EntityTypes.DISTRACTION))
-        {
-            distracted = false;
-            Destroy(collision.gameObject);
-        }
-        else if (collision.gameObject.CompareTag(EntityTypes.PLAYER) || collision.gameObject.CompareTag(EntityTypes.BIRD))
-        {
-            RunInteraction(collision.gameObject.tag, collision.gameObject);
-        }
-        else if (collision.gameObject.GetComponent<MJB_TrapTileBehaviour>())
+        if (collision.gameObject.GetComponent<MJB_TrapTileBehaviour>() && JDH_World.GetWorldIsEvil())
         {
             TrapInteraction(collision.gameObject);
-        }
-    }
-
-    private void RunInteraction(string interactionType, GameObject interactor)
-    {
-        if (interactionType == EntityTypes.PLAYER)
-        {
-            PlayerInteraction(interactor);
-        }
-        else if (interactionType == EntityTypes.BIRD)
-        {
-            BirdInteraction(interactor);
         }
     }
 
     public override void InitializeAI()
     {
         base.InitializeAI();
-        baseProperties.patrolSpeed = 1.0f;
-        baseProperties.chaseSpeed = 3.0f;
+        baseProperties.patrolSpeed = 1f;
+        baseProperties.chaseSpeed = 2f;
         direction = new Vector3(1, 0, 0);
         direction.Normalize();
         baseProperties.target = base.AcquireTarget();
@@ -236,9 +231,10 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
     {
         foreach (GameObject trap in dodgeTheseTraps)
         {
-            if (Vector3.Distance(trap.transform.position, transform.position) <= 2)
+            if (Vector3.Distance(trap.transform.position, transform.position) <= 1)
             {
                 direction *= -1;
+                transform.Translate(direction * Time.deltaTime * baseProperties.patrolSpeed);
             }
         }
     }
@@ -246,14 +242,16 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
     private void PlayerInteraction(GameObject playerObject)
     {
         // Dim lights here 
-        playerObject.GetComponent<MJB_PlayerEnemyCountScript>().AddtoCount("puppy");
+        playerObject.GetComponent<JDH_HealthSystem>().DealDamage();
         gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        Destroy(gameObject);
     }
 
     private void BirdInteraction(GameObject bird)
     {
         StartCoroutine(SpawnKind(bird.transform.position));
         bird.GetComponent<JDH_HealthSystem>().DealDamage();
+        Destroy(bird);
     }
 
     private void TrapInteraction(GameObject trap)
@@ -262,10 +260,12 @@ public class MJB_PuppyScript : JDH_AIBaseFramework
         if (trap.CompareTag("Alarm"))
         {
             GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().ReceiveSound(transform.position, 100f);
+            Destroy(trap);
         }
         else
         {
             gameObject.GetComponent<JDH_HealthSystem>().DealDamage();
+            Destroy(gameObject);
         }
     }
 

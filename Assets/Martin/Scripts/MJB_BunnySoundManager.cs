@@ -5,7 +5,7 @@ using UnityEngine;
 public class MJB_BunnySoundManager : MonoBehaviour
 {
 
-    [SerializeField] private float maxListenDistance = 20.0f;
+    [SerializeField] private float maxListenDistance = 5f;
 
     private List<GameObject> allBunnies;
 

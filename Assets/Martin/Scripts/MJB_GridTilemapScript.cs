@@ -11,21 +11,21 @@ public class MJB_GridTilemapScript : MonoBehaviour
 
     void Start()
     {
-        evilMap.enabled = false;
-        cuteMap.enabled = true;
+        evilMap.GetComponent<TilemapRenderer>().enabled = false;
+        cuteMap.GetComponent<TilemapRenderer>().enabled = true;
     }
 
     void Update()
     {
         if (JDH_World.GetWorldIsCute())
         {
-            evilMap.enabled = false;
-            cuteMap.enabled = true;
+            evilMap.GetComponent<TilemapRenderer>().enabled = false;
+            cuteMap.GetComponent<TilemapRenderer>().enabled = true;
         }
         else
         {
-            evilMap.enabled = true;
-            cuteMap.enabled = false;
+            evilMap.GetComponent<TilemapRenderer>().enabled = true;
+            cuteMap.GetComponent<TilemapRenderer>().enabled = false;
         }
     }
 }

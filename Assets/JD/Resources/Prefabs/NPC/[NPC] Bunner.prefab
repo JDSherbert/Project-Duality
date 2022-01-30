@@ -408,6 +408,7 @@ GameObject:
   - component: {fileID: 4183611671859564224}
   - component: {fileID: 4183611671859564231}
   - component: {fileID: 4183611671859564226}
+  - component: {fileID: -9067660306913187622}
   m_Layer: 0
   m_Name: '[NPC] Bunner'
   m_TagString: Bunny
@@ -452,7 +453,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &4183611671859564231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -519,4 +520,31 @@ MonoBehaviour:
         m_Calls: []
   cooldown: 3
   spawnDelay: 3
-  maxListenDistance: 10
+--- !u!114 &-9067660306913187622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4183611671859564230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69746c0d0f2476c429453acd66b0fb9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health:
+    current: 1
+    state: 0
+  events:
+    OnHeal:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDamagedBy:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDeath:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRespawn:
+      m_PersistentCalls:
+        m_Calls: []

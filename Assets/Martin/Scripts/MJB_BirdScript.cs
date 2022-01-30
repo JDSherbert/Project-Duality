@@ -22,15 +22,18 @@ public class MJB_BirdScript : JDH_AIBaseFramework
         BehaviourHandler();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(EntityTypes.PLAYER))
+        if (JDH_World.GetWorldIsEvil())
         {
-            PlayerInteraction(collision.gameObject);
-        }
-        else if (collision.gameObject.CompareTag(EntityTypes.BUNNY))
-        {
-            BunnyInteraction(collision.gameObject);
+            if (collision.gameObject.CompareTag(EntityTypes.PLAYER))
+            {
+                PlayerInteraction(collision.gameObject);
+            }
+            else if (collision.gameObject.CompareTag(EntityTypes.BUNNY))
+            {
+                BunnyInteraction(collision.gameObject);
+            }
         }
     }
 
@@ -39,6 +42,7 @@ public class MJB_BirdScript : JDH_AIBaseFramework
         base.InitializeAI();
         baseProperties.target = base.AcquireTarget();
         baseProperties.chaseSpeed = 5.0f;
+        lastPlayerPosition = baseProperties.target.transform.position;
     }
 
     public override void BehaviourHandler()
@@ -86,6 +90,7 @@ public class MJB_BirdScript : JDH_AIBaseFramework
     private void PlayerInteraction(GameObject playerObject)
     {
         playerObject.GetComponent<JDH_HealthSystem>().DealDamage();
+        Destroy(gameObject);
     }
 
     private void BunnyInteraction(GameObject bunny)
@@ -93,6 +98,7 @@ public class MJB_BirdScript : JDH_AIBaseFramework
         StartCoroutine(SpawnKind(bunny.transform.position));
         GameObject.Find("BunnySoundManager").GetComponent<MJB_BunnySoundManager>().RemoveBunny(bunny);
         bunny.GetComponent<JDH_HealthSystem>().DealDamage();
+        Destroy(bunny);
     }
 
     public void TriggerBird()
