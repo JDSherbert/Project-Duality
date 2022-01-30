@@ -29,6 +29,10 @@ namespace Sherbert.GameplayStatics
         {
             return GameObject.FindGameObjectWithTag(PlayerTag);
         }
+        public static Vector3 GetPlayerChaseSpeed()
+        {
+            return GetPlayer().GetComponent<JDH_PlayerChaseController>().chaser.forcedMovement;
+        }
 
         public static void KillPlayer()
         {
