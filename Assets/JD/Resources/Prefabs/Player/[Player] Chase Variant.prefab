@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[Player] Chase Variant'
       objectReference: {fileID: 0}
+    - target: {fileID: 2558534937139627716, guid: ae61b162e63ed4743b9727ad4b61998a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2558534938098764017, guid: ae61b162e63ed4743b9727ad4b61998a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -162,6 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2558534936954622162, guid: ae61b162e63ed4743b9727ad4b61998a, type: 3}
+    - {fileID: 2558534937139627716, guid: ae61b162e63ed4743b9727ad4b61998a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ae61b162e63ed4743b9727ad4b61998a, type: 3}
 --- !u!1 &870069807314465897 stripped
 GameObject:
