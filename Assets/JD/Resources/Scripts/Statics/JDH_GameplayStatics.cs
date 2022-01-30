@@ -20,6 +20,7 @@ namespace Sherbert.GameplayStatics
     {
         public const string PLAYERTAG = "Player";
         public const string UITAG = "UI Element";
+        public const string TRAPS = "Traps";
         
         public static GameObject GetPlayer()
         {
@@ -63,6 +64,15 @@ namespace Sherbert.GameplayStatics
         public static bool IsTrueNull(this UnityEngine.Object obj)
         {
             return (object)obj == null;
+        }
+
+        public static void UncoverAllTraps()
+        {
+            MJB_TrapTileBehaviour[] traps = GameObject.Find(TRAPS).GetComponentsInChildren<MJB_TrapTileBehaviour>();
+            foreach(MJB_TrapTileBehaviour trap in traps)
+            {
+                trap.UncoverTrap();
+            }
         }
     }
 

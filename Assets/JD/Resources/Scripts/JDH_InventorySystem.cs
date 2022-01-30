@@ -102,6 +102,18 @@ namespace Sherbert.Inventory
                 if (EquippedItems[currentSelection].currentAmount > 0)
                 {
                     events.OnItemUsed.Invoke(EquippedItems[currentSelection]);
+                    Debug.Log(EquippedItems[currentSelection].itemName + " used.");
+                    if(EquippedItems[currentSelection].ID == "ORB0001" || EquippedItems[currentSelection].ID == "ORB0002")
+                    {
+                        JDH_GameplayStatics.UncoverAllTraps();
+                    }
+                    else if(EquippedItems[currentSelection].ID == "FOOD0001")
+                    {
+                        //Meat
+                    }
+
+
+
                     if (EquippedItems[currentSelection].type == JDH_Item.ItemType.Consumable) EquippedItems[currentSelection].currentAmount--;
                     if (EquippedItems[currentSelection].currentAmount == 0) EquippedItems[currentSelection] = null;
                     RefreshIcons();
@@ -138,6 +150,11 @@ namespace Sherbert.Inventory
                     if(EquippedItems[currentSelection].itemObject)
                     {
                         if(EquippedItems[currentSelection].ID == InventorySettings.HUMPHREY) Debug.Log("You destroyed Humphrey!");
+                        else if(EquippedItems[currentSelection].ID == "FOOD001")
+                        {
+                            GameObject meat = Instantiate(EquippedItems[currentSelection].itemObject, transform);
+                            meat.tag = "Distraction";
+                        }
                         else Instantiate(EquippedItems[currentSelection].itemObject, transform);
                         
                     }
