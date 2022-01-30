@@ -20,6 +20,7 @@ namespace Sherbert.Framework
         [System.Serializable]
         public class ChaseControllerSettings
         {
+            public const int MAGICNUMBER = 3;
             public Vector3 forcedMovement = new Vector3(1,0,0);
             public float verticalSpeed = 1.0f;
         }
@@ -28,13 +29,13 @@ namespace Sherbert.Framework
         void Update()
         {
             InputHandler();
-            IdleState(); 
+            MoveState();
             ChaseHandler();
         }
 
         void ChaseHandler()
         {
-            transform.position += chaser.forcedMovement * Time.deltaTime;
+            transform.position += (chaser.forcedMovement / ChaseControllerSettings.MAGICNUMBER) * Time.fixedDeltaTime;
             player.events.OnWalkRight.Invoke();
             MoveState();
         }
@@ -45,27 +46,24 @@ namespace Sherbert.Framework
 
             if (player.input.AXIS_VERTICAL > 0)
             {
-                transform.position += (Vector3.up * chaser.verticalSpeed) * Time.deltaTime;
+                transform.position += ((Vector3.up * chaser.verticalSpeed) / ChaseControllerSettings.MAGICNUMBER) * Time.fixedDeltaTime;
                 player.events.OnWalkUp.Invoke();
             }
             else if (player.input.AXIS_VERTICAL < 0) 
             {
-                transform.position += (Vector3.down * chaser.verticalSpeed) * Time.deltaTime;
+                transform.position += ((Vector3.down * chaser.verticalSpeed)/ ChaseControllerSettings.MAGICNUMBER) * Time.fixedDeltaTime;
                 player.events.OnWalkDown.Invoke();
             }
         }
 
         public override void IdleState()
         {
-            player.locomotion.start = transform.position;
-            player.locomotion.end = player.locomotion.start + player.locomotion.nextMoveCommand;
-            player.locomotion.distance = (player.locomotion.end - player.locomotion.start).magnitude;
             MoveState();
         }
 
         public override void MoveState()
         {
-            player.locomotion.velocity = Mathf.Clamp01(player.locomotion.velocity + Time.deltaTime * player.locomotion.acceleration);
+            player.state = PlayerControllerSettings.State.Moving;
             UpdateAnimator(chaser.forcedMovement);
         }
     }
