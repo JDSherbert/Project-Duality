@@ -8040,6 +8040,7 @@ GameObject:
   - component: {fileID: 668861653}
   - component: {fileID: 668861652}
   - component: {fileID: 668861651}
+  - component: {fileID: 668861654}
   m_Layer: 0
   m_Name: '[Decor] Bookstand [128x128]'
   m_TagString: Untagged
@@ -8138,6 +8139,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668861654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668861650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6673ff2ebb36f48ba45f39bb2d9607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &941242502
 PrefabInstance:
   m_ObjectHideFlags: 0
