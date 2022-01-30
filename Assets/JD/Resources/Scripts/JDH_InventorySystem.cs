@@ -117,6 +117,7 @@ namespace Sherbert.Inventory
             {
                 if (EquippedItems[currentSelection].currentAmount > 0)
                 {
+                    if(EquippedItems[currentSelection].itemObject) Instantiate(EquippedItems[currentSelection].itemObject);
                     events.OnItemDropped.Invoke(EquippedItems[currentSelection]);
                     EquippedItems[currentSelection].currentAmount--;
                     if (EquippedItems[currentSelection].currentAmount == 0) EquippedItems[currentSelection] = null;
