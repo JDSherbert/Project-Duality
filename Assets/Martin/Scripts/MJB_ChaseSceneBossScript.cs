@@ -1,31 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sherbert.GameplayStatics;
 
 public class MJB_ChaseSceneBossScript : MonoBehaviour
 {
 
-    private float bossMoveSpeed, moveSpeedMultiplier;
+    private Vector3 bossMoveSpeed;
+    private GameObject player;
 
     void Start()
     {
-        bossMoveSpeed = GameObject.FindGameObjectWithTag("Player").GetComponent<MJB_ChaseScenePlayerScript>().GetChaseSpeed();
-        moveSpeedMultiplier = GameObject.FindGameObjectWithTag("Player").GetComponent<MJB_ChaseScenePlayerScript>().GetChaseSpeedMultiplier();
+        player = GameObject.FindGameObjectWithTag("Player");
+        bossMoveSpeed = JDH_GameplayStatics.GetPlayerChaseSpeed();
     }
 
     void Update()
     {
-        bossMoveSpeed *= moveSpeedMultiplier;
+        bossMoveSpeed = JDH_GameplayStatics.GetPlayerChaseSpeed();
+        MoveBoss();
     }
 
     private void FixedUpdate()
     {
-        MoveBoss();
+        
     }
 
     private void MoveBoss()
     {
-        transform.Translate(Vector3.right * Time.deltaTime * bossMoveSpeed);
+        transform.Translate((Time.fixedDeltaTime * bossMoveSpeed) / 2);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

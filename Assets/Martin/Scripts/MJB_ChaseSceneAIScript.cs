@@ -5,7 +5,7 @@ using UnityEngine;
 public class MJB_ChaseSceneAIScript : MonoBehaviour
 {
 
-    [SerializeField] private float jumpHeight = 5, jumpSpeed = 10, fallSpeed = 5;
+    [SerializeField] private float jumpHeight = 5, jumpSpeed = 10, fallSpeed = 5, playerPushBack = 1;
     private bool jumping = false;
 
     // Start is called before the first frame update
@@ -20,6 +20,15 @@ public class MJB_ChaseSceneAIScript : MonoBehaviour
         if (!jumping)
         {
             StartCoroutine(EnemyJump());
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.transform.Translate(Vector3.left * Time.deltaTime * playerPushBack);
+            Destroy(gameObject);
         }
     }
 
