@@ -61,6 +61,26 @@ namespace Sherbert.GameplayStatics
             return GetPlayer().GetComponentInChildren<JDH_RuneSystem>().GetAllRunes();
         }
 
+        public static bool GetHasHumphrey()
+        {
+            List<JDH_Item> items = GetAllItems();
+            foreach(JDH_Item item in items)
+            {
+                if(item.ID == "ITEM0000") return true;
+            }
+            return false;
+        }
+
+        public static JDH_Item GetItemReference(string ID)
+        {
+            List<JDH_Item> items = GetAllItems();
+            foreach(JDH_Item item in items)
+            {
+                if(item.ID == ID) return item;
+            }
+            return null;
+        }
+
         public static bool IsTrueNull(this UnityEngine.Object obj)
         {
             return (object)obj == null;

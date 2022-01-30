@@ -66,6 +66,7 @@ namespace Sherbert.Inventory
 
         void Awake()
         {
+            if(JDH_PreserveCollected.HasHumphrey) AddItem(JDH_PreserveCollected.Humphrey);
             RefreshIcons();
         }
         void Update()

@@ -66,6 +66,11 @@ namespace Sherbert.Lexicon
         // Monobehaviour methods
         //____________________________________________________________________________________________________________________________________________
 
+        void Awake()
+        {
+            this.DiscoveredRunes = JDH_PreserveCollected.DiscoveredRunes;
+        }
+
         void Update()
         {
             InputHandler();
