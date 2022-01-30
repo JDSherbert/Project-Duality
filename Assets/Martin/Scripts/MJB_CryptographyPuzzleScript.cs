@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Sherbert.Inventory;
+using Sherbert.GameplayStatics;
+using Sherbert.Application;
 
 public class MJB_CryptographyPuzzleScript : MonoBehaviour
 {
@@ -12,6 +15,7 @@ public class MJB_CryptographyPuzzleScript : MonoBehaviour
     [SerializeField] private int shift = 0;
     [SerializeField] private Image characterSelect = null;
     [SerializeField] private Text shiftValueClue = null;
+    [SerializeField] private Canvas puzzleCanvas = null;
 
     private Text[] translations;
     private List<Sherbert.Lexicon.JDH_Rune> foundRunes;
@@ -62,12 +66,15 @@ public class MJB_CryptographyPuzzleScript : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("Player"))
         {
-            List<Sherbert.Inventory.JDH_Item> inventoryList = Sherbert.GameplayStatics.JDH_GameplayStatics.GetAllItems();
-            foreach (Sherbert.Inventory.JDH_Item item in inventoryList)
+            List<JDH_Item> inventoryList = JDH_GameplayStatics.GetAllItems();
+            foreach (JDH_Item item in inventoryList)
             {
-                if (item.ID == "ITEM0000")
+                if (!JDH_GameplayStatics.IsTrueNull(item))
                 {
-                    secondsLeft += 60;
+                    if (item.ID == "ITEM0000")
+                    {
+                        secondsLeft += 60;
+                    }
                 }
             }
         }
@@ -168,7 +175,7 @@ public class MJB_CryptographyPuzzleScript : MonoBehaviour
 
     void Update()
     {
-        if (stillGoing)
+        if (stillGoing && puzzleCanvas.enabled)
         {
             UpdateCharacterPointer(GameObject.Find("DecryptionSpace").GetComponent<TextMeshProUGUI>());
             CheckForInputPointerMovement();
@@ -236,7 +243,7 @@ public class MJB_CryptographyPuzzleScript : MonoBehaviour
     {
         if (decryptionSpace.text == phrase)
         {
-            Debug.Log("Win");
+            JDH_ApplicationManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
             stillGoing = false;
         }
     }
@@ -252,7 +259,10 @@ public class MJB_CryptographyPuzzleScript : MonoBehaviour
             }
             timerText.text += (secondsLeft % 60).ToString();
             yield return new WaitForSeconds(1);
-            secondsLeft--;
+            if (puzzleCanvas.enabled)
+            {
+                secondsLeft--;
+            }
             if (secondsLeft == 0)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
